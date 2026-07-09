@@ -214,9 +214,9 @@
 
 /* ===== 内容区域 ===== */
 .md-content__inner {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 2.5rem;
+    padding: 2rem 3rem;
 }
 
 /* ===== 图片 ===== */
@@ -277,6 +277,7 @@
     
     .md-content__inner {
         padding: 1rem 1.2rem;
+        max-width: 100%;
     }
     
     .md-content h1 { font-size: 1.5rem; }
@@ -290,4 +291,45 @@
     .md-source-file { display: none !important; }
     .md-content { margin: 0; padding: 0; }
     .md-content__inner { max-width: 100%; padding: 0; }
+}
+
+
+/* ===== 面试题目录悬浮跳转标签 ===== */
+.toc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.15s;
+}
+
+.toc-row:hover {
+    background-color: var(--md-accent-fg-color--transparent);
+}
+
+.toc-row .jump-btn {
+    opacity: 0;
+    transition: opacity 0.15s;
+    font-size: 0.8em;
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--md-primary-fg-color);
+    white-space: nowrap;
+}
+
+.toc-row:hover .jump-btn {
+    opacity: 1;
+}
+
+.toc-row .jump-btn:hover {
+    background-color: var(--md-primary-fg-color);
+    color: white;
+}
+
+/* ===== 表格行悬浮 ===== */
+.md-content table tr {
+    transition: background-color 0.15s;
 }

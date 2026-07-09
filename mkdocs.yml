@@ -104,10 +104,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/huanghhcri/ai-llm-tutorial
   generator: false
-  alternate:
-    - name: 中文
-      link: /
-      lang: zh
 
 nav:
   - 首页: index.md

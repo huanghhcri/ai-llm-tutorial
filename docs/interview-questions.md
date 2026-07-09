@@ -1,129 +1,171 @@
 # AI 大模型全栈面试题汇总
 
-> 共 **179** 道面试题，覆盖 17 个章节，从 Python 基础到模型评估与对齐。
+> 共 **179** 道面试题，覆盖 17 章，从 Python 基础到模型评估与对齐。
 >
 > 难度标识：⭐ 基础 | ⭐⭐ 进阶 | ⭐⭐⭐ 高级
 
 ## 📋 快速导航
 
-点击章节标题展开题目列表，点击题目直接跳转到答案。
+点击章节名称跳转到该章正文学习，点击右侧「查看题目」跳转到该章面试题。
 
-| 篇章 | 章节 | 题数 |
-|------|------|------|
-| 基础篇 | [第01章 Python基础](#第01章-python基础) | 12 道 |
-|  | [第02章 深度学习基础](#第02章-深度学习基础) | 12 道 |
-|  | [第03章 NLP基础与Tokenization](#第03章-nlp基础与tokenization) | 12 道 |
-| 原理篇 | [第04章 Transformer架构详解](#第04章-transformer架构详解) | 12 道 |
-|  | [第05章 大模型原理与发展脉络](#第05章-大模型原理与发展脉络) | 10 道 |
-| 应用篇 | [第06章 大模型API调用实战](#第06章-大模型api调用实战) | 10 道 |
-|  | [第07章 PromptEngineering提示词工程](#第07章-promptengineering提示词工程) | 10 道 |
-|  | [第08章 Embedding与向量数据库](#第08章-embedding与向量数据库) | 11 道 |
-|  | [第09章 RAG检索增强生成](#第09章-rag检索增强生成) | 10 道 |
-| 框架篇 | [第10章 LangChain与LangGraph实战](#第10章-langchain与langgraph实战) | 10 道 |
-|  | [第11章 AI_Agent开发](#第11章-ai_agent开发) | 10 道 |
-|  | [第12章 多Agent系统](#第12章-多agent系统) | 10 道 |
-| 进阶篇 | [第13章 模型微调](#第13章-模型微调) | 10 道 |
-|  | [第14章 模型量化](#第14章-模型量化) | 10 道 |
-|  | [第15章 私有化部署](#第15章-私有化部署) | 10 道 |
-|  | [第16章 多模态大模型](#第16章-多模态大模型) | 10 道 |
-|  | [第17章 模型评估与对齐](#第17章-模型评估与对齐) | 10 道 |
+### 基础篇
+
+<div class="toc-table">
+
+| 章节 | 题数 | |
+|------|------|---|
+| <span class="toc-row">[第01章 Python基础](第01章_Python基础.md) <a class="jump-btn" href="#第01章-python基础">查看题目 →</a></span> | 12 道 | |
+| <span class="toc-row">[第02章 深度学习基础](第02章_深度学习基础.md) <a class="jump-btn" href="#第02章-深度学习基础">查看题目 →</a></span> | 12 道 | |
+| <span class="toc-row">[第03章 NLP基础与Tokenization](第03章_NLP基础与Tokenization.md) <a class="jump-btn" href="#第03章-nlp基础与tokenization">查看题目 →</a></span> | 12 道 | |
+
+</div>
+
+### 原理篇
+
+<div class="toc-table">
+
+| 章节 | 题数 | |
+|------|------|---|
+| <span class="toc-row">[第04章 Transformer架构详解](第04章_Transformer架构详解.md) <a class="jump-btn" href="#第04章-transformer架构详解">查看题目 →</a></span> | 12 道 | |
+| <span class="toc-row">[第05章 大模型原理与发展脉络](第05章_大模型原理与发展脉络.md) <a class="jump-btn" href="#第05章-大模型原理与发展脉络">查看题目 →</a></span> | 10 道 | |
+
+</div>
+
+### 应用篇
+
+<div class="toc-table">
+
+| 章节 | 题数 | |
+|------|------|---|
+| <span class="toc-row">[第06章 大模型API调用实战](第06章_大模型API调用实战.md) <a class="jump-btn" href="#第06章-大模型api调用实战">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第07章 Prompt Engineering](第07章_PromptEngineering提示词工程.md) <a class="jump-btn" href="#第07章-prompt-engineering">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第08章 Embedding与向量数据库](第08章_Embedding与向量数据库.md) <a class="jump-btn" href="#第08章-embedding与向量数据库">查看题目 →</a></span> | 11 道 | |
+| <span class="toc-row">[第09章 RAG检索增强生成](第09章_RAG检索增强生成.md) <a class="jump-btn" href="#第09章-rag检索增强生成">查看题目 →</a></span> | 10 道 | |
+
+</div>
+
+### 框架篇
+
+<div class="toc-table">
+
+| 章节 | 题数 | |
+|------|------|---|
+| <span class="toc-row">[第10章 LangChain与LangGraph](第10章_LangChain与LangGraph实战.md) <a class="jump-btn" href="#第10章-langchain与langgraph">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第11章 AI Agent开发](第11章_AI_Agent开发.md) <a class="jump-btn" href="#第11章-ai-agent开发">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第12章 多Agent系统](第12章_多Agent系统.md) <a class="jump-btn" href="#第12章-多agent系统">查看题目 →</a></span> | 10 道 | |
+
+</div>
+
+### 进阶篇
+
+<div class="toc-table">
+
+| 章节 | 题数 | |
+|------|------|---|
+| <span class="toc-row">[第13章 模型微调](第13章_模型微调.md) <a class="jump-btn" href="#第13章-模型微调">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第14章 模型量化](第14章_模型量化.md) <a class="jump-btn" href="#第14章-模型量化">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第15章 私有化部署](第15章_私有化部署.md) <a class="jump-btn" href="#第15章-私有化部署">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第16章 多模态大模型](第16章_多模态大模型.md) <a class="jump-btn" href="#第16章-多模态大模型">查看题目 →</a></span> | 10 道 | |
+| <span class="toc-row">[第17章 模型评估与对齐](第17章_模型评估与对齐.md) <a class="jump-btn" href="#第17章-模型评估与对齐">查看题目 →</a></span> | 10 道 | |
+
+</div>
 
 ---
 
 ??? note "第01章 Python基础（12 道）"
 
-    - [1. Python 的 `list` 和 C# 的 `List<T>` 有什么本质区别... ⭐](#题目-1python-的-list-和-c-的-listt-有什么本质区别)
-    - [2. Python 的 `self` 和 C# 的 `this` 有什么区别？为什么 ... ⭐](#题目-2python-的-self-和-c-的-this-有什么区别为什么-python-要显式写-self)
+    - [1. Python 的 `list` 和 C# 的 `List<T>` 有什... ⭐](#题目-1python-的-list-和-c-的-listt-有什么本质区别)
+    - [2. Python 的 `self` 和 C# 的 `this` 有什么区别... ⭐](#题目-2python-的-self-和-c-的-this-有什么区别为什么-python-要显式写-self)
     - [3. 什么是 Python 的 GIL？它对 AI 开发有什么影响？ ⭐⭐](#题目-3什么是-python-的-gil它对-ai-开发有什么影响)
-    - [4. 解释 Python 装饰器的工作原理，以及它和 C# 的 Attribute 有... ⭐⭐](#题目-4解释-python-装饰器的工作原理以及它和-c-的-attribute-有什么不同)
-    - [5. `@dataclass` 和普通 `class` 有什么区别？什么场景下使用？ ⭐](#题目-5dataclass-和普通-class-有什么区别什么场景下使用)
-    - [6. Python 的 `list` 切片 `a[1:3]` 返回什么？如果 `a =... ⭐](#题目-6python-的-list-切片-a13-返回什么如果-a-0-1-2-3-4)
+    - [4. 解释 Python 装饰器的工作原理，以及它和 C# 的 Attrib... ⭐⭐](#题目-4解释-python-装饰器的工作原理以及它和-c-的-attribute-有什么不同)
+    - [5. `@dataclass` 和普通 `class` 有什么区别？什么场景... ⭐](#题目-5dataclass-和普通-class-有什么区别什么场景下使用)
+    - [6. Python 的 `list` 切片 `a[1:3]` 返回什么？如果... ⭐](#题目-6python-的-list-切片-a13-返回什么如果-a-0-1-2-3-4)
     - [7. Python 的 `is` 和 `==` 有什么区别？ ⭐](#题目-7python-的-is-和-有什么区别)
-    - [8. Python 的异常处理中，`except Exception as e` 和 ... ⭐⭐](#题目-8python-的异常处理中except-exception-as-e-和-except-valueerror-typeerror-as-e-有什么区别为什么要尽量捕获具体异常)
-    - [9. 解释 Python 的 `asyncio` 和 C# 的 `Task` 异步模型... ⭐⭐](#题目-9解释-python-的-asyncio-和-c-的-task-异步模型的异同)
+    - [8. Python 的异常处理中，`except Exception as ... ⭐⭐](#题目-8python-的异常处理中except-exception-as-e-和-except-valueerror-typeerror-as-e-有什么区别为什么要尽量捕获具体异常)
+    - [9. 解释 Python 的 `asyncio` 和 C# 的 `Task`... ⭐⭐](#题目-9解释-python-的-asyncio-和-c-的-task-异步模型的异同)
     - [10. Python 的虚拟环境是什么？为什么 AI 开发特别需要它？ ⭐](#题目-10python-的虚拟环境是什么为什么-ai-开发特别需要它)
-    - [11. Python 的 `dict` 和 C# 的 `Dictionary<TKey,... ⭐⭐](#题目-11python-的-dict-和-c-的-dictionarytkey-tvalue-在性能和使用上有什么差异)
-    - [12. 什么是 Python 的猴子补丁（Monkey Patching）？在 AI 开... ⭐⭐⭐](#题目-12什么是-python-的猴子补丁monkey-patching在-ai-开发中有什么应用场景)
+    - [11. Python 的 `dict` 和 C# 的 `Dictionary<... ⭐⭐](#题目-11python-的-dict-和-c-的-dictionarytkey-tvalue-在性能和使用上有什么差异)
+    - [12. 什么是 Python 的猴子补丁（Monkey Patching）？在... ⭐⭐⭐](#题目-12什么是-python-的猴子补丁monkey-patching在-ai-开发中有什么应用场景)
 
 ??? note "第02章 深度学习基础（12 道）"
 
     - [13. 什么是梯度消失问题？ReLU 是如何缓解的？ ⭐⭐](#题目-13什么是梯度消失问题relu-是如何缓解的)
     - [14. 为什么深度学习需要激活函数？如果全部用线性激活会怎样？ ⭐](#题目-14为什么深度学习需要激活函数如果全部用线性激活会怎样)
-    - [15. 比较 Batch Normalization 和 Layer Normaliza... ⭐⭐](#题目-15比较-batch-normalization-和-layer-normalization它们分别用在什么场景)
+    - [15. 比较 Batch Normalization 和 Layer Norm... ⭐⭐](#题目-15比较-batch-normalization-和-layer-normalization它们分别用在什么场景)
     - [16. Adam 优化器的原理是什么？它比 SGD 好在哪里？ ⭐⭐](#题目-16adam-优化器的原理是什么它比-sgd-好在哪里)
     - [17. 什么是 Dropout？为什么它能防止过拟合？推理时怎么处理？ ⭐](#题目-17什么是-dropout为什么它能防止过拟合推理时怎么处理)
-    - [18. 解释 Precision、Recall、F1 Score 的含义和区别，以及在医... ⭐⭐](#题目-18解释-precisionrecallf1-score-的含义和区别以及在医疗场景中如何选择)
-    - [19. PyTorch 中 `model.train()` 和 `model.eval(... ⭐](#题目-19pytorch-中-modeltrain-和-modeleval-的区别是什么不切换会有什么后果)
+    - [18. 解释 Precision、Recall、F1 Score 的含义和区别... ⭐⭐](#题目-18解释-precisionrecallf1-score-的含义和区别以及在医疗场景中如何选择)
+    - [19. PyTorch 中 `model.train()` 和 `model.... ⭐](#题目-19pytorch-中-modeltrain-和-modeleval-的区别是什么不切换会有什么后果)
     - [20. 什么是学习率预热（Warmup）？为什么大模型训练需要它？ ⭐⭐⭐](#题目-20什么是学习率预热warmup为什么大模型训练需要它)
     - [21. 解释前向传播和反向传播的计算过程，以及 PyTorch 如何自动求导。 ⭐⭐](#题目-21解释前向传播和反向传播的计算过程以及-pytorch-如何自动求导)
     - [22. 数据标准化（StandardScaler）为什么重要？如果不做会怎样？ ⭐](#题目-22数据标准化standardscaler为什么重要如果不做会怎样)
     - [23. 什么是类别不平衡？如何处理？请举例说明。 ⭐⭐](#题目-23什么是类别不平衡如何处理请举例说明)
-    - [24. 解释 PyTorch 的动态计算图与 TensorFlow 的静态计算图的区别，... ⭐⭐⭐](#题目-24解释-pytorch-的动态计算图与-tensorflow-的静态计算图的区别以及-pytorch-为什么更受欢迎)
+    - [24. 解释 PyTorch 的动态计算图与 TensorFlow 的静态计算... ⭐⭐⭐](#题目-24解释-pytorch-的动态计算图与-tensorflow-的静态计算图的区别以及-pytorch-为什么更受欢迎)
 
 ??? note "第03章 NLP基础与Tokenization（12 道）"
 
     - [25. 为什么不用 One-Hot 编码作为大模型的输入？ ⭐](#题目-25为什么不用-one-hot-编码作为大模型的输入)
-    - [26. 解释 BPE 和 WordPiece 的区别，以及它们分别被哪些模型使用？ ⭐⭐](#题目-26解释-bpe-和-wordpiece-的区别以及它们分别被哪些模型使用)
+    - [26. 解释 BPE 和 WordPiece 的区别，以及它们分别被哪些模型使... ⭐⭐](#题目-26解释-bpe-和-wordpiece-的区别以及它们分别被哪些模型使用)
     - [27. 什么是 Token？为什么大模型按 Token 收费而不是按字符收费？ ⭐](#题目-27什么是-token为什么大模型按-token-收费而不是按字符收费)
-    - [28. Word2Vec 的 Skip-gram 和 CBOW 模型有什么区别？各自适合... ⭐⭐](#题目-28word2vec-的-skip-gram-和-cbow-模型有什么区别各自适合什么场景)
-    - [29. 什么是 OOV（Out-of-Vocabulary）问题？子词分词如何解决？ ⭐⭐](#题目-29什么是-oovout-of-vocabulary问题子词分词如何解决)
+    - [28. Word2Vec 的 Skip-gram 和 CBOW 模型有什么区别... ⭐⭐](#题目-28word2vec-的-skip-gram-和-cbow-模型有什么区别各自适合什么场景)
+    - [29. 什么是 OOV（Out-of-Vocabulary）问题？子词分词如何... ⭐⭐](#题目-29什么是-oovout-of-vocabulary问题子词分词如何解决)
     - [30. 如何用词向量计算文档相似度？这种方法有什么局限性？ ⭐⭐](#题目-30如何用词向量计算文档相似度这种方法有什么局限性)
     - [31. 为什么中文分词比英文分词更难？大模型还需要中文分词吗？ ⭐⭐](#题目-31为什么中文分词比英文分词更难大模型还需要中文分词吗)
-    - [32. 解释 Embedding 层的工作原理，以及它和 Word2Vec 的区别。 ⭐⭐](#题目-32解释-embedding-层的工作原理以及它和-word2vec-的区别)
-    - [33. tiktoken 的 `cl100k_base` 和 `o200k_base` ... ⭐](#题目-33tiktoken-的-cl100k_base-和-o200k_base-有什么区别选择哪个)
-    - [34. 什么是上下文窗口（Context Window）？它对养老院 AI 应用有什么影... ⭐](#题目-34什么是上下文窗口context-window它对养老院-ai-应用有什么影响)
+    - [32. 解释 Embedding 层的工作原理，以及它和 Word2Vec 的... ⭐⭐](#题目-32解释-embedding-层的工作原理以及它和-word2vec-的区别)
+    - [33. tiktoken 的 `cl100k_base` 和 `o200k_b... ⭐](#题目-33tiktoken-的-cl100k_base-和-o200k_base-有什么区别选择哪个)
+    - [34. 什么是上下文窗口（Context Window）？它对养老院 AI 应... ⭐](#题目-34什么是上下文窗口context-window它对养老院-ai-应用有什么影响)
     - [35. 解释 TF-IDF 的原理，为什么它比简单的词频统计更好？ ⭐](#题目-35解释-tf-idf-的原理为什么它比简单的词频统计更好)
-    - [36. 如果要为养老院构建 RAG 系统，文档的 Tokenization 策略应该怎么... ⭐⭐⭐](#题目-36如果要为养老院构建-rag-系统文档的-tokenization-策略应该怎么设计)
+    - [36. 如果要为养老院构建 RAG 系统，文档的 Tokenization 策... ⭐⭐⭐](#题目-36如果要为养老院构建-rag-系统文档的-tokenization-策略应该怎么设计)
 
 ??? note "第04章 Transformer架构详解（12 道）"
 
-    - [37. 解释 Self-Attention 的计算过程，以及为什么需要除以 √dₖ。 ⭐⭐](#题目-37解释-self-attention-的计算过程以及为什么需要除以-dₖ)
+    - [37. 解释 Self-Attention 的计算过程，以及为什么需要除以 √... ⭐⭐](#题目-37解释-self-attention-的计算过程以及为什么需要除以-dₖ)
     - [38. 多头注意力相比单头注意力的优势是什么？为什么头数通常是 8 或 12？ ⭐⭐](#题目-38多头注意力相比单头注意力的优势是什么为什么头数通常是-8-或-12)
-    - [39. RoPE 相比正弦位置编码和可学习位置编码有什么优势？为什么 LLaMA 选择 ... ⭐⭐⭐](#题目-39rope-相比正弦位置编码和可学习位置编码有什么优势为什么-llama-选择-rope)
-    - [40. 为什么 Transformer 使用 LayerNorm 而不是 BatchNo... ⭐⭐](#题目-40为什么-transformer-使用-layernorm-而不是-batchnorm)
+    - [39. RoPE 相比正弦位置编码和可学习位置编码有什么优势？为什么 LLaM... ⭐⭐⭐](#题目-39rope-相比正弦位置编码和可学习位置编码有什么优势为什么-llama-选择-rope)
+    - [40. 为什么 Transformer 使用 LayerNorm 而不是 Ba... ⭐⭐](#题目-40为什么-transformer-使用-layernorm-而不是-batchnorm)
     - [41. 解释残差连接的作用原理，以及没有残差连接会怎样。 ⭐](#题目-41解释残差连接的作用原理以及没有残差连接会怎样)
-    - [42. 编码器（Encoder）和解码器（Decoder）的核心区别是什么？BERT 和... ⭐](#题目-42编码器encoder和解码器decoder的核心区别是什么bert-和-gpt-分别使用哪种)
-    - [43. 什么是 FFN（前馈网络）在 Transformer 中的作用？为什么 d_ff... ⭐⭐](#题目-43什么是-ffn前馈网络在-transformer-中的作用为什么-d_ff-通常是-d_model-的-4-倍)
+    - [42. 编码器（Encoder）和解码器（Decoder）的核心区别是什么？B... ⭐](#题目-42编码器encoder和解码器decoder的核心区别是什么bert-和-gpt-分别使用哪种)
+    - [43. 什么是 FFN（前馈网络）在 Transformer 中的作用？为什么... ⭐⭐](#题目-43什么是-ffn前馈网络在-transformer-中的作用为什么-d_ff-通常是-d_model-的-4-倍)
     - [44. 什么是注意力掩码（Attention Mask）？有哪些类型？ ⭐⭐](#题目-44什么是注意力掩码attention-mask有哪些类型)
     - [45. Transformer 的计算复杂度是多少？为什么长序列处理很昂贵？ ⭐⭐⭐](#题目-45transformer-的计算复杂度是多少为什么长序列处理很昂贵)
-    - [46. 解释 Pre-Norm 和 Post-Norm 的区别，以及现代模型为什么选择 ... ⭐⭐⭐](#题目-46解释-pre-norm-和-post-norm-的区别以及现代模型为什么选择-pre-norm)
+    - [46. 解释 Pre-Norm 和 Post-Norm 的区别，以及现代模型为... ⭐⭐⭐](#题目-46解释-pre-norm-和-post-norm-的区别以及现代模型为什么选择-pre-norm)
     - [47. 什么是 KV Cache？为什么它对大模型推理至关重要？ ⭐⭐⭐](#题目-47什么是-kv-cache为什么它对大模型推理至关重要)
-    - [48. 对比 BERT、GPT 和 T5 三种 Transformer 变体的架构差异和... ⭐⭐](#题目-48对比-bertgpt-和-t5-三种-transformer-变体的架构差异和适用场景)
+    - [48. 对比 BERT、GPT 和 T5 三种 Transformer 变体的... ⭐⭐](#题目-48对比-bertgpt-和-t5-三种-transformer-变体的架构差异和适用场景)
 
 ??? note "第05章 大模型原理与发展脉络（10 道）"
 
-    - [49. 解释 Scaling Law 的核心发现，以及它对大模型训练的实际指导意义。 ⭐⭐](#题目-49解释-scaling-law-的核心发现以及它对大模型训练的实际指导意义)
-    - [50. 什么是 MoE（Mixture of Experts）架构？它解决了什么问题？ ⭐⭐](#题目-50什么是-moemixture-of-experts架构它解决了什么问题)
-    - [51. 对比 Qwen 和 DeepSeek 的技术路线差异，你会为养老院项目选择哪个？ ⭐⭐](#题目-51对比-qwen-和-deepseek-的技术路线差异你会为养老院项目选择哪个)
-    - [52. 什么是涌现能力（Emergent Abilities）？这个概念现在还有争议吗？ ⭐⭐](#题目-52什么是涌现能力emergent-abilities这个概念现在还有争议吗)
+    - [49. 解释 Scaling Law 的核心发现，以及它对大模型训练的实际指导... ⭐⭐](#题目-49解释-scaling-law-的核心发现以及它对大模型训练的实际指导意义)
+    - [50. 什么是 MoE（Mixture of Experts）架构？它解决了什... ⭐⭐](#题目-50什么是-moemixture-of-experts架构它解决了什么问题)
+    - [51. 对比 Qwen 和 DeepSeek 的技术路线差异，你会为养老院项目... ⭐⭐](#题目-51对比-qwen-和-deepseek-的技术路线差异你会为养老院项目选择哪个)
+    - [52. 什么是涌现能力（Emergent Abilities）？这个概念现在还... ⭐⭐](#题目-52什么是涌现能力emergent-abilities这个概念现在还有争议吗)
     - [53. 上下文窗口的大小对养老院 AI 应用有什么实际影响？ ⭐](#题目-53上下文窗口的大小对养老院-ai-应用有什么实际影响)
     - [54. 开源模型和闭源模型各有什么优势？如何选择？ ⭐](#题目-54开源模型和闭源模型各有什么优势如何选择)
-    - [55. 解释 DeepSeek-V3/V4 的 MLA（Multi-Latent Att... ⭐⭐⭐](#题目-55解释-deepseek-v3v4-的-mlamulti-latent-attention相比标准注意力有什么优势)
-    - [56. Chinchilla Scaling Law 认为 GPT-3 存在什么问题？对... ⭐⭐](#题目-56chinchilla-scaling-law-认为-gpt-3-存在什么问题对现在的模型训练有什么启示)
-    - [57. LLaMA-4 的架构有什么创新？为什么它有 128 个专家但只激活 17B？ ⭐⭐](#题目-57llama-4-的架构有什么创新为什么它有-128-个专家但只激活-17b)
+    - [55. 解释 DeepSeek-V3/V4 的 MLA（Multi-Laten... ⭐⭐⭐](#题目-55解释-deepseek-v3v4-的-mlamulti-latent-attention相比标准注意力有什么优势)
+    - [56. Chinchilla Scaling Law 认为 GPT-3 存在什... ⭐⭐](#题目-56chinchilla-scaling-law-认为-gpt-3-存在什么问题对现在的模型训练有什么启示)
+    - [57. LLaMA-4 的架构有什么创新？为什么它有 128 个专家但只激活 ... ⭐⭐](#题目-57llama-4-的架构有什么创新为什么它有-128-个专家但只激活-17b)
     - [58. 为养老院设计一个大模型集成方案，如何结合多个模型的优势？ ⭐⭐⭐](#题目-58为养老院设计一个大模型集成方案如何结合多个模型的优势)
 
 ??? note "第06章 大模型API调用实战（10 道）"
 
-    - [59. 解释 Chat Completions API 中 system、user、as... ⭐](#题目-59解释-chat-completions-api-中-systemuserassistanttool-四种角色的区别)
-    - [60. temperature 参数如何影响大模型的输出？不同场景应该如何设置？ ⭐](#题目-60temperature-参数如何影响大模型的输出不同场景应该如何设置)
+    - [59. 解释 Chat Completions API 中 system、us... ⭐](#题目-59解释-chat-completions-api-中-systemuserassistanttool-四种角色的区别)
+    - [60. temperature 参数如何影响大模型的输出？不同场景应该如何设置... ⭐](#题目-60temperature-参数如何影响大模型的输出不同场景应该如何设置)
     - [61. Function Calling 的完整流程是什么？有哪些注意事项？ ⭐⭐](#题目-61function-calling-的完整流程是什么有哪些注意事项)
-    - [62. 为什么 DeepSeek 和 Qwen 的 API 可以用 OpenAI 的 S... ⭐](#题目-62为什么-deepseek-和-qwen-的-api-可以用-openai-的-sdk-调用这种兼容性有什么意义)
+    - [62. 为什么 DeepSeek 和 Qwen 的 API 可以用 OpenA... ⭐](#题目-62为什么-deepseek-和-qwen-的-api-可以用-openai-的-sdk-调用这种兼容性有什么意义)
     - [63. 如何实现流式输出？它解决了什么用户体验问题？ ⭐](#题目-63如何实现流式输出它解决了什么用户体验问题)
     - [64. 如何管理多轮对话的上下文？当对话太长时怎么办？ ⭐⭐](#题目-64如何管理多轮对话的上下文当对话太长时怎么办)
     - [65. API 调用中的错误类型有哪些？如何设计健壮的重试策略？ ⭐⭐](#题目-65api-调用中的错误类型有哪些如何设计健壮的重试策略)
     - [66. 如何估算和控制大模型 API 的调用成本？ ⭐](#题目-66如何估算和控制大模型-api-的调用成本)
-    - [67. `response_format={"type": "json_object"}... ⭐⭐](#题目-67response_formattype-json_object-参数的作用是什么有什么限制)
-    - [68. OpenAI SDK 的同步客户端和异步客户端有什么区别？ASP.NET Cor... ⭐](#题目-68openai-sdk-的同步客户端和异步客户端有什么区别aspnet-core-开发者应该如何选择)
+    - [67. `response_format={"type": "json_obj... ⭐⭐](#题目-67response_formattype-json_object-参数的作用是什么有什么限制)
+    - [68. OpenAI SDK 的同步客户端和异步客户端有什么区别？ASP.NE... ⭐](#题目-68openai-sdk-的同步客户端和异步客户端有什么区别aspnet-core-开发者应该如何选择)
 
 ??? note "第07章 PromptEngineering提示词工程（10 道）"
 
-    - [69. Zero-shot、Few-shot、Chain-of-Thought 三种提示... ⭐](#题目-69zero-shotfew-shotchain-of-thought-三种提示策略分别适合什么场景)
+    - [69. Zero-shot、Few-shot、Chain-of-Thought... ⭐](#题目-69zero-shotfew-shotchain-of-thought-三种提示策略分别适合什么场景)
     - [70. 如何设计一个好的 System Prompt？有哪些常见错误？ ⭐⭐](#题目-70如何设计一个好的-system-prompt有哪些常见错误)
     - [71. 什么是 Chain-of-Thought？为什么它能提升推理准确率？ ⭐⭐](#题目-71什么是-chain-of-thought为什么它能提升推理准确率)
     - [72. 什么是 Prompt Injection？如何防御？ ⭐⭐](#题目-72什么是-prompt-injection如何防御)
     - [73. 如何让大模型输出稳定的 JSON 格式？有哪些注意事项？ ⭐](#题目-73如何让大模型输出稳定的-json-格式有哪些注意事项)
-    - [74. Few-shot 提示中，示例的选择对结果有多大影响？如何选择好的示例？ ⭐⭐](#题目-74few-shot-提示中示例的选择对结果有多大影响如何选择好的示例)
+    - [74. Few-shot 提示中，示例的选择对结果有多大影响？如何选择好的示例... ⭐⭐](#题目-74few-shot-提示中示例的选择对结果有多大影响如何选择好的示例)
     - [75. 什么是 Prompt Chaining？什么时候应该使用它？ ⭐⭐](#题目-75什么是-prompt-chaining什么时候应该使用它)
     - [76. temperature 和 top_p 有什么区别？应该如何选择？ ⭐](#题目-76temperature-和-top_p-有什么区别应该如何选择)
     - [77. 如何评估 Prompt 的质量？有哪些量化方法？ ⭐⭐](#题目-77如何评估-prompt-的质量有哪些量化方法)
@@ -134,21 +176,21 @@
     - [79. 什么是 Embedding？它和 One-Hot 编码有什么区别？ ⭐](#题目-79什么是-embedding它和-one-hot-编码有什么区别)
     - [80. 什么是余弦相似度？为什么用它而不是欧氏距离？ ⭐](#题目-80什么是余弦相似度为什么用它而不是欧氏距离)
     - [81. 为什么需要文档切分？切分粒度如何选择？ ⭐⭐](#题目-81为什么需要文档切分切分粒度如何选择)
-    - [82. 对比 Chroma、Qdrant、Milvus 三个向量数据库，如何选择？ ⭐⭐](#题目-82对比-chromaqdrantmilvus-三个向量数据库如何选择)
+    - [82. 对比 Chroma、Qdrant、Milvus 三个向量数据库，如何选... ⭐⭐](#题目-82对比-chromaqdrantmilvus-三个向量数据库如何选择)
     - [83. 什么是 ANN（近似最近邻）？它和精确搜索有什么区别？ ⭐⭐](#题目-83什么是-ann近似最近邻它和精确搜索有什么区别)
     - [84. chunk_overlap 的作用是什么？没有它会有什么问题？ ⭐](#题目-84chunk_overlap-的作用是什么没有它会有什么问题)
     - [85. 如何评估 Embedding 模型的质量？ ⭐⭐](#题目-85如何评估-embedding-模型的质量)
     - [86. 向量数据库的"过滤"功能是什么？为什么重要？ ⭐](#题目-86向量数据库的过滤功能是什么为什么重要)
     - [87. 什么是混合检索（Hybrid Search）？它解决了什么问题？ ⭐⭐⭐](#题目-87什么是混合检索hybrid-search它解决了什么问题)
     - [88. 如何处理 Embedding 的成本问题？ ⭐](#题目-88如何处理-embedding-的成本问题)
-    - [89. 如何将 Embedding + 向量数据库集成到养老院的 ASP.NET Cor... ⭐⭐⭐](#题目-89如何将-embedding-向量数据库集成到养老院的-aspnet-core-系统中)
+    - [89. 如何将 Embedding + 向量数据库集成到养老院的 ASP.NE... ⭐⭐⭐](#题目-89如何将-embedding-向量数据库集成到养老院的-aspnet-core-系统中)
 
 ??? note "第09章 RAG检索增强生成（10 道）"
 
     - [90. 什么是 RAG？它解决了大模型的哪些问题？ ⭐](#题目-90什么是-rag它解决了大模型的哪些问题)
-    - [91. Re-ranking 的作用是什么？为什么有了 Embedding 检索还需要 ... ⭐⭐](#题目-91re-ranking-的作用是什么为什么有了-embedding-检索还需要-re-ranking)
+    - [91. Re-ranking 的作用是什么？为什么有了 Embedding 检... ⭐⭐](#题目-91re-ranking-的作用是什么为什么有了-embedding-检索还需要-re-ranking)
     - [92. Query 改写解决了什么问题？有哪些改写策略？ ⭐⭐](#题目-92query-改写解决了什么问题有哪些改写策略)
-    - [93. 什么是 Self-RAG 和 Corrective RAG？它们比标准 RAG ... ⭐⭐⭐](#题目-93什么是-self-rag-和-corrective-rag它们比标准-rag-好在哪里)
+    - [93. 什么是 Self-RAG 和 Corrective RAG？它们比标准... ⭐⭐⭐](#题目-93什么是-self-rag-和-corrective-rag它们比标准-rag-好在哪里)
     - [94. 如何评估 RAG 系统的质量？RAGAS 的四个指标分别衡量什么？ ⭐⭐](#题目-94如何评估-rag-系统的质量ragas-的四个指标分别衡量什么)
     - [95. 文档切分的 chunk_size 如何选择？太大或太小有什么问题？ ⭐](#题目-95文档切分的-chunk_size-如何选择太大或太小有什么问题)
     - [96. RAG 系统如何处理"知识库中没有答案"的情况？ ⭐⭐](#题目-96rag-系统如何处理知识库中没有答案的情况)
@@ -159,27 +201,27 @@
 ??? note "第10章 LangChain与LangGraph实战（10 道）"
 
     - [100. LangChain 的 LCEL 是什么？它解决了什么问题？ ⭐](#题目-100langchain-的-lcel-是什么它解决了什么问题)
-    - [101. LangGraph 和 LangChain Chain 有什么区别？什么时候用 ... ⭐⭐](#题目-101langgraph-和-langchain-chain-有什么区别什么时候用-langgraph)
-    - [102. LangChain 的 Runnable 协议是什么？invoke/stream... ⭐](#题目-102langchain-的-runnable-协议是什么invokestreambatch-有什么区别)
+    - [101. LangGraph 和 LangChain Chain 有什么区别？什... ⭐⭐](#题目-101langgraph-和-langchain-chain-有什么区别什么时候用-langgraph)
+    - [102. LangChain 的 Runnable 协议是什么？invoke/s... ⭐](#题目-102langchain-的-runnable-协议是什么invokestreambatch-有什么区别)
     - [103. 如何用 LangChain 实现带结构化输出的 RAG？ ⭐⭐](#题目-103如何用-langchain-实现带结构化输出的-rag)
     - [104. LangGraph 中如何实现条件分支和循环？ ⭐⭐](#题目-104langgraph-中如何实现条件分支和循环)
     - [105. LangSmith 的作用是什么？它对标 .NET 生态的什么工具？ ⭐](#题目-105langsmith-的作用是什么它对标-net-生态的什么工具)
-    - [106. LangChain 的 `with_structured_output()` 和... ⭐⭐](#题目-106langchain-的-with_structured_output-和-jsonoutputparser-有什么区别)
-    - [107. 如何在 LangGraph 中实现人工审批（Human-in-the-loop）... ⭐⭐](#题目-107如何在-langgraph-中实现人工审批human-in-the-loop)
+    - [106. LangChain 的 `with_structured_output... ⭐⭐](#题目-106langchain-的-with_structured_output-和-jsonoutputparser-有什么区别)
+    - [107. 如何在 LangGraph 中实现人工审批（Human-in-the-... ⭐⭐](#题目-107如何在-langgraph-中实现人工审批human-in-the-loop)
     - [108. LangChain 生态中各包的职责如何划分？ ⭐](#题目-108langchain-生态中各包的职责如何划分)
     - [109. 对比 LangChain 和 LlamaIndex，如何选择？ ⭐⭐](#题目-109对比-langchain-和-llamaindex如何选择)
 
 ??? note "第11章 AI_Agent开发（10 道）"
 
-    - [110. 什么是 ReAct 模式？它和普通的 Function Calling 有什么区... ⭐⭐](#题目-110什么是-react-模式它和普通的-function-calling-有什么区别)
-    - [111. MCP（Model Context Protocol）是什么？它解决了什么问题？ ⭐⭐](#题目-111mcpmodel-context-protocol是什么它解决了什么问题)
+    - [110. 什么是 ReAct 模式？它和普通的 Function Calling... ⭐⭐](#题目-110什么是-react-模式它和普通的-function-calling-有什么区别)
+    - [111. MCP（Model Context Protocol）是什么？它解决了... ⭐⭐](#题目-111mcpmodel-context-protocol是什么它解决了什么问题)
     - [112. 如何给 Agent 设计工具？有哪些最佳实践？ ⭐⭐](#题目-112如何给-agent-设计工具有哪些最佳实践)
     - [113. Agent 的记忆机制有哪些层次？如何实现？ ⭐⭐](#题目-113agent-的记忆机制有哪些层次如何实现)
-    - [114. 对比 LangGraph、OpenAI Agents SDK、CrewAI 三个... ⭐⭐](#题目-114对比-langgraphopenai-agents-sdkcrewai-三个-agent-框架)
+    - [114. 对比 LangGraph、OpenAI Agents SDK、Crew... ⭐⭐](#题目-114对比-langgraphopenai-agents-sdkcrewai-三个-agent-框架)
     - [115. 如何防止 Agent 进入无限循环或做出危险操作？ ⭐⭐](#题目-115如何防止-agent-进入无限循环或做出危险操作)
-    - [116. MCP Server 的三种能力（Tools、Resources、Prompts... ⭐](#题目-116mcp-server-的三种能力toolsresourcesprompts分别适合什么场景)
+    - [116. MCP Server 的三种能力（Tools、Resources、Pr... ⭐](#题目-116mcp-server-的三种能力toolsresourcesprompts分别适合什么场景)
     - [117. 如何测试 Agent 的可靠性？ ⭐⭐](#题目-117如何测试-agent-的可靠性)
-    - [118. 什么是 Human-in-the-loop？在养老院 Agent 中如何实现？ ⭐⭐](#题目-118什么是-human-in-the-loop在养老院-agent-中如何实现)
+    - [118. 什么是 Human-in-the-loop？在养老院 Agent 中如... ⭐⭐](#题目-118什么是-human-in-the-loop在养老院-agent-中如何实现)
     - [119. 如何将 Agent 集成到 ASP.NET Core 后端？ ⭐⭐⭐](#题目-119如何将-agent-集成到-aspnet-core-后端)
 
 ??? note "第12章 多Agent系统（10 道）"
@@ -192,15 +234,15 @@
     - [125. 如何控制多 Agent 系统的成本？ ⭐⭐](#题目-125如何控制多-agent-系统的成本)
     - [126. 如何确保多 Agent 系统的一致性和可追溯性？ ⭐⭐](#题目-126如何确保多-agent-系统的一致性和可追溯性)
     - [127. 多 Agent 系统如何处理某个 Agent 失败的情况？ ⭐⭐](#题目-127多-agent-系统如何处理某个-agent-失败的情况)
-    - [128. 对比 LangGraph 和 CrewAI 实现多 Agent 的方式。 ⭐⭐](#题目-128对比-langgraph-和-crewai-实现多-agent-的方式)
+    - [128. 对比 LangGraph 和 CrewAI 实现多 Agent 的方式... ⭐⭐](#题目-128对比-langgraph-和-crewai-实现多-agent-的方式)
     - [129. 为养老院设计一个多 Agent 系统的完整架构。 ⭐⭐⭐](#题目-129为养老院设计一个多-agent-系统的完整架构)
 
 ??? note "第13章 模型微调（10 道）"
 
-    - [130. LoRA 的原理是什么？为什么它能用极少的参数达到接近全参数微调的效果？ ⭐⭐](#题目-130lora-的原理是什么为什么它能用极少的参数达到接近全参数微调的效果)
+    - [130. LoRA 的原理是什么？为什么它能用极少的参数达到接近全参数微调的效果... ⭐⭐](#题目-130lora-的原理是什么为什么它能用极少的参数达到接近全参数微调的效果)
     - [131. QLoRA 相比 LoRA 有什么改进？NF4 量化是什么？ ⭐⭐](#题目-131qlora-相比-lora-有什么改进nf4-量化是什么)
     - [132. 如何为养老院场景准备高质量的微调数据集？ ⭐⭐](#题目-132如何为养老院场景准备高质量的微调数据集)
-    - [133. 全参数微调、LoRA、Prompt Tuning 三种微调方式有什么区别？ ⭐⭐](#题目-133全参数微调loraprompt-tuning-三种微调方式有什么区别)
+    - [133. 全参数微调、LoRA、Prompt Tuning 三种微调方式有什么区... ⭐⭐](#题目-133全参数微调loraprompt-tuning-三种微调方式有什么区别)
     - [134. 微调和 RAG 如何结合使用？ ⭐⭐](#题目-134微调和-rag-如何结合使用)
     - [135. 如何评估微调后的模型效果？ ⭐⭐](#题目-135如何评估微调后的模型效果)
     - [136. 什么是过拟合？微调时如何防止过拟合？ ⭐](#题目-136什么是过拟合微调时如何防止过拟合)
@@ -213,7 +255,7 @@
     - [140. 量化的原理是什么？为什么 INT4 量化还能保持不错的效果？ ⭐⭐](#题目-140量化的原理是什么为什么-int4-量化还能保持不错的效果)
     - [141. GPTQ 和 AWQ 有什么区别？如何选择？ ⭐⭐](#题目-141gptq-和-awq-有什么区别如何选择)
     - [142. GGUF 格式的 Q4_K_M 是什么意思？不同量化级别如何选择？ ⭐](#题目-142gguf-格式的-q4_k_m-是什么意思不同量化级别如何选择)
-    - [143. bitsandbytes 的 NF4 是什么？为什么比普通 INT4 好？ ⭐⭐](#题目-143bitsandbytes-的-nf4-是什么为什么比普通-int4-好)
+    - [143. bitsandbytes 的 NF4 是什么？为什么比普通 INT4 ... ⭐⭐](#题目-143bitsandbytes-的-nf4-是什么为什么比普通-int4-好)
     - [144. 如何评估量化对模型质量的影响？ ⭐⭐](#题目-144如何评估量化对模型质量的影响)
     - [145. CPU 推理和 GPU 推理的速度差距有多大？养老院应该选哪个？ ⭐](#题目-145cpu-推理和-gpu-推理的速度差距有多大养老院应该选哪个)
     - [146. 量化后的模型还能继续微调吗？ ⭐](#题目-146量化后的模型还能继续微调吗)
@@ -226,9 +268,9 @@
     - [150. 为什么养老院需要私有化部署？有什么替代方案？ ⭐](#题目-150为什么养老院需要私有化部署有什么替代方案)
     - [151. Ollama 和 vLLM 分别适合什么场景？如何选择？ ⭐⭐](#题目-151ollama-和-vllm-分别适合什么场景如何选择)
     - [152. 如何将 AI 服务集成到 ASP.NET Core 后端？ ⭐⭐](#题目-152如何将-ai-服务集成到-aspnet-core-后端)
-    - [153. Docker 部署有什么优势？如何用 Docker Compose 编排 AI ... ⭐⭐](#题目-153docker-部署有什么优势如何用-docker-compose-编排-ai-服务)
+    - [153. Docker 部署有什么优势？如何用 Docker Compose 编... ⭐⭐](#题目-153docker-部署有什么优势如何用-docker-compose-编排-ai-服务)
     - [154. 如何规划养老院的 GPU 硬件？ ⭐](#题目-154如何规划养老院的-gpu-硬件)
-    - [155. 什么是 PagedAttention？为什么 vLLM 比 Ollama 快？ ⭐⭐⭐](#题目-155什么是-pagedattention为什么-vllm-比-ollama-快)
+    - [155. 什么是 PagedAttention？为什么 vLLM 比 Ollam... ⭐⭐⭐](#题目-155什么是-pagedattention为什么-vllm-比-ollama-快)
     - [156. 如何监控 AI 服务的运行状态？ ⭐](#题目-156如何监控-ai-服务的运行状态)
     - [157. 如何处理模型服务的高可用和故障恢复？ ⭐⭐](#题目-157如何处理模型服务的高可用和故障恢复)
     - [158. 如何优化 AI 服务的响应速度？ ⭐⭐](#题目-158如何优化-ai-服务的响应速度)
