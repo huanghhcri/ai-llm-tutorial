@@ -5,7 +5,7 @@
 site_name: AI 大模型全栈教程
 site_description: 从 Python 基础到 Agent 开发，17 章系统学习
 site_author: huanghhcri
-site_url: https://huanghhcri.github.io/ai-llm-tutorial/
+site_url: https://huanghcri.github.io/ai-llm-tutorial/
 
 repo_name: huanghhcri/ai-llm-tutorial
 repo_url: https://github.com/huanghhcri/ai-llm-tutorial
@@ -32,19 +32,28 @@ theme:
     text: Noto Sans SC
     code: JetBrains Mono
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-    - content.code.annotate
-    - toc.follow
+    - navigation.tabs              # 顶部标签页（基础篇/原理篇/应用篇...）
+    - navigation.tabs.link         # 标签页可点击跳转
+    - navigation.sections          # 侧边栏分组
+    - navigation.expand            # 自动展开所有导航项
+    - navigation.top               # 返回顶部按钮
+    - navigation.indexes           # 分组索引页
+    - navigation.footer            # 上一章/下一章 底部导航
+    - navigation.instant           # 即时加载（SPA 体验）
+    - navigation.tracking          # URL 跟踪
+    - search.suggest               # 搜索建议
+    - search.highlight             # 搜索高亮
+    - search.share                 # 搜索分享
+    - content.code.copy            # 代码复制按钮
+    - content.code.annotate        # 代码注释
+    - content.tabs.link            # 标签页同步
+    - toc.follow                   # 目录跟随滚动
+    - header.autohide              # 滚动时隐藏标题栏
   icon:
     repo: fontawesome/brands/github
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
   - def_list
@@ -60,6 +69,9 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -82,12 +94,20 @@ markdown_extensions:
 plugins:
   - search:
       lang: zh
+  - tags
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/huanghhcri/ai-llm-tutorial
   generator: false
+  alternate:
+    - name: 中文
+      link: /
+      lang: zh
 
 nav:
   - 首页: index.md

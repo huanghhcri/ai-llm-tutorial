@@ -1,9 +1,12 @@
-/* AI 大模型全栈教程 - 自定义样式 */
+/* ========================================
+   AI 大模型全栈教程 - 自定义样式
+   ======================================== */
 
-/* 中文排版优化 */
+/* 全局字体和排版 */
 .md-content {
     font-feature-settings: "kern";
     text-rendering: optimizeLegibility;
+    line-height: 1.75;
 }
 
 /* 标题样式 */
@@ -11,21 +14,46 @@
     font-weight: 700;
     margin-top: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--md-primary-fg-color);
+    border-bottom: 3px solid var(--md-primary-fg-color);
+    letter-spacing: -0.01em;
 }
 
 .md-content h2 {
     font-weight: 600;
-    margin-top: 2rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+    margin-top: 2.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content h3 {
+    font-weight: 600;
+    margin-top: 1.8rem;
+}
+
+/* 段落间距 */
+.md-content p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 /* 代码块样式增强 */
 .md-content code {
     font-size: 0.82em;
-    padding: 0.15em 0.3em;
+    padding: 0.15em 0.4em;
     border-radius: 4px;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+.md-content pre code {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    border-radius: 8px;
+}
+
+/* 代码块标题栏（添加语言标签） */
+.md-content .highlight {
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 /* 表格样式 */
@@ -33,50 +61,159 @@
     display: table;
     width: 100%;
     font-size: 0.85em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .md-content table th {
-    background-color: var(--md-primary-fg-color--light);
+    background-color: var(--md-primary-fg-color);
     color: white;
     font-weight: 600;
     white-space: nowrap;
+    padding: 10px 14px;
+    border: none;
 }
 
-.md-content table tr:hover {
+.md-content table td {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content table tr:last-child td {
+    border-bottom: none;
+}
+
+.md-content table tr:hover td {
     background-color: var(--md-accent-fg-color--transparent);
-}
-
-/* 难度标识样式 */
-/* ⭐ 基础 / ⭐⭐ 进阶 / ⭐⭐⭐ 高级 */
-.md-content strong:has(+ em),
-.md-content p:has(> strong:first-child) {
-    line-height: 1.8;
 }
 
 /* Admonition 样式增强 */
 .md-typeset .admonition {
     border-radius: 8px;
     margin: 1.5em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
 }
 
-/* 页脚样式 */
-.md-footer {
-    margin-top: 2rem;
+.md-typeset .admonition-title {
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
 }
 
 /* 侧边栏导航优化 */
 .md-nav__item {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
 }
 
 .md-nav__link--active {
     font-weight: 600;
+    color: var(--md-primary-fg-color);
+}
+
+.md-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--md-primary-fg-color);
+    border-radius: 0 3px 3px 0;
+}
+
+/* 顶部标签页样式 */
+.md-tabs {
+    background-color: var(--md-primary-fg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-tabs__link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85) !important;
+}
+
+.md-tabs__link--active {
+    color: white !important;
+    font-weight: 600;
+}
+
+/* 页脚样式 */
+.md-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+
+.md-footer__link--prev,
+.md-footer__link--next {
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+}
+
+/* 搜索框优化 */
+.md-search__form {
+    border-radius: 8px;
+}
+
+/* 内容区域最大宽度 */
+.md-content__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+}
+
+/* 图片样式 */
+.md-content img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+}
+
+/* 链接样式 */
+.md-content a {
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.md-content a:hover {
+    border-bottom-color: var(--md-primary-fg-color);
+}
+
+/* 列表样式 */
+.md-content ul, .md-content ol {
+    padding-left: 1.5rem;
+}
+
+.md-content li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+/* 引用块 */
+.md-content blockquote {
+    border-left: 4px solid var(--md-primary-fg-color);
+    background-color: var(--md-default-fg-color--lightest);
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
+}
+
+/* 任务列表（checkbox） */
+.md-content .task-list-item {
+    list-style-type: none;
 }
 
 /* 响应式优化 */
 @media screen and (max-width: 76.1875em) {
     .md-nav--primary .md-nav__title {
         background-color: var(--md-primary-fg-color);
+    }
+    
+    .md-content__inner {
+        padding: 1rem 1.2rem;
     }
 }
 
@@ -85,12 +222,18 @@
     .md-sidebar,
     .md-header,
     .md-footer,
-    .md-content__button {
+    .md-content__button,
+    .md-tabs {
         display: none !important;
     }
     
     .md-content {
         margin: 0;
+        padding: 0;
+    }
+    
+    .md-content__inner {
+        max-width: 100%;
         padding: 0;
     }
 }
