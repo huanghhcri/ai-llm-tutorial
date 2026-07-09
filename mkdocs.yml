@@ -5,7 +5,7 @@
 site_name: AI 大模型全栈教程
 site_description: 从 Python 基础到 Agent 开发，17 章系统学习
 site_author: huanghhcri
-site_url: https://huanghcri.github.io/ai-llm-tutorial/
+site_url: https://huanghhcri.github.io/ai-llm-tutorial/
 
 repo_name: huanghhcri/ai-llm-tutorial
 repo_url: https://github.com/huanghhcri/ai-llm-tutorial
