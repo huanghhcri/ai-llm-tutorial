@@ -99,6 +99,9 @@ plugins:
 extra_css:
   - assets/stylesheets/extra.css
 
+extra_javascript:
+  - assets/javascripts/anchor-expand.js
+
 extra:
   social:
     - icon: fontawesome/brands/github
