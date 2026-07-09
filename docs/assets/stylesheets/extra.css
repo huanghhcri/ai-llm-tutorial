@@ -342,3 +342,39 @@ h3.toc-chapter {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 }
+
+/* ===== 右侧目录样式 ===== */
+.md-sidebar--secondary .md-nav__item {
+    padding: 2px 0;
+}
+
+.md-sidebar--secondary .md-nav__link {
+    font-size: 0.75rem;
+    color: var(--md-default-fg-color--light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+.md-sidebar--secondary .md-nav__link:hover {
+    color: var(--md-primary-fg-color);
+    background-color: var(--md-accent-fg-color--transparent);
+}
+
+.md-sidebar--secondary .md-nav__link--active {
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+}
+
+/* 目录标题 */
+.md-sidebar--secondary .md-nav__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    color: var(--md-default-fg-color--light);
+}
+
+/* 子项缩进 */
+.md-sidebar--secondary .md-nav__item .md-nav__item {
+    padding-left: 12px;
+}
