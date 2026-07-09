@@ -333,3 +333,12 @@
 .md-content table tr {
     transition: background-color 0.15s;
 }
+
+/* ===== 面试题目录：隐藏正文中的章节标题，只在右侧 TOC 显示 ===== */
+h3.toc-chapter {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
