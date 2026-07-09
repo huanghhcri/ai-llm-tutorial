@@ -1,0 +1,116 @@
+# AI 大模型全栈教程
+# 面向 C# 开发者的 AI 大模型全栈学习指南
+# https://github.com/huanghhcri/ai-llm-tutorial
+
+site_name: AI 大模型全栈教程
+site_description: 从 Python 基础到 Agent 开发，17 章系统学习
+site_author: huanghhcri
+site_url: https://huanghhcri.github.io/ai-llm-tutorial/
+
+repo_name: huanghhcri/ai-llm-tutorial
+repo_url: https://github.com/huanghhcri/ai-llm-tutorial
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: zh
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/huanghhcri/ai-llm-tutorial
+  generator: false
+
+nav:
+  - 首页: index.md
+  - 面试题库: interview-questions.md
+  - 基础篇:
+    - 第 01 章 Python 基础: 第01章_Python基础.md
+    - 第 02 章 深度学习基础: 第02章_深度学习基础.md
+    - 第 03 章 NLP 基础与 Tokenization: 第03章_NLP基础与Tokenization.md
+  - 原理篇:
+    - 第 04 章 Transformer 架构详解: 第04章_Transformer架构详解.md
+    - 第 05 章 大模型原理与发展脉络: 第05章_大模型原理与发展脉络.md
+  - 应用篇:
+    - 第 06 章 大模型 API 调用实战: 第06章_大模型API调用实战.md
+    - 第 07 章 Prompt Engineering: 第07章_PromptEngineering提示词工程.md
+    - 第 08 章 Embedding 与向量数据库: 第08章_Embedding与向量数据库.md
+    - 第 09 章 RAG 检索增强生成: 第09章_RAG检索增强生成.md
+  - 框架篇:
+    - 第 10 章 LangChain 与 LangGraph: 第10章_LangChain与LangGraph实战.md
+    - 第 11 章 AI Agent 开发: 第11章_AI_Agent开发.md
+    - 第 12 章 多 Agent 系统: 第12章_多Agent系统.md
+  - 进阶篇:
+    - 第 13 章 模型微调: 第13章_模型微调.md
+    - 第 14 章 模型量化: 第14章_模型量化.md
+    - 第 15 章 私有化部署: 第15章_私有化部署.md
+    - 第 16 章 多模态大模型: 第16章_多模态大模型.md
+    - 第 17 章 模型评估与对齐: 第17章_模型评估与对齐.md

@@ -1,0 +1,96 @@
+/* AI 大模型全栈教程 - 自定义样式 */
+
+/* 中文排版优化 */
+.md-content {
+    font-feature-settings: "kern";
+    text-rendering: optimizeLegibility;
+}
+
+/* 标题样式 */
+.md-content h1 {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+.md-content h2 {
+    font-weight: 600;
+    margin-top: 2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
+
+/* 代码块样式增强 */
+.md-content code {
+    font-size: 0.82em;
+    padding: 0.15em 0.3em;
+    border-radius: 4px;
+}
+
+/* 表格样式 */
+.md-content table {
+    display: table;
+    width: 100%;
+    font-size: 0.85em;
+}
+
+.md-content table th {
+    background-color: var(--md-primary-fg-color--light);
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.md-content table tr:hover {
+    background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* 难度标识样式 */
+/* ⭐ 基础 / ⭐⭐ 进阶 / ⭐⭐⭐ 高级 */
+.md-content strong:has(+ em),
+.md-content p:has(> strong:first-child) {
+    line-height: 1.8;
+}
+
+/* Admonition 样式增强 */
+.md-typeset .admonition {
+    border-radius: 8px;
+    margin: 1.5em 0;
+}
+
+/* 页脚样式 */
+.md-footer {
+    margin-top: 2rem;
+}
+
+/* 侧边栏导航优化 */
+.md-nav__item {
+    font-size: 0.85rem;
+}
+
+.md-nav__link--active {
+    font-weight: 600;
+}
+
+/* 响应式优化 */
+@media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__title {
+        background-color: var(--md-primary-fg-color);
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .md-sidebar,
+    .md-header,
+    .md-footer,
+    .md-content__button {
+        display: none !important;
+    }
+    
+    .md-content {
+        margin: 0;
+        padding: 0;
+    }
+}
