@@ -1,19 +1,20 @@
 /**
  * Hypothesis 批注工具增强
  * - 添加可见的批注入口按钮
- * - 配置中文界面
+ * - 高亮文字添加侧边指示器
+ * - 中文使用说明
  */
 (function() {
     'use strict';
 
     // 等待页面加载完成
     window.addEventListener('load', function() {
-        // 延迟执行，确保 Hypothesis 脚本已加载
         setTimeout(initAnnotationHint, 2000);
+        setTimeout(initHighlightObserver, 3000);
     });
 
+    // ========== 批注入口按钮 ==========
     function initAnnotationHint() {
-        // 创建浮动批注按钮
         var btn = document.createElement('div');
         btn.id = 'annotation-hint';
         btn.innerHTML = '📝';
@@ -38,7 +39,6 @@
             'user-select: none'
         ].join(';');
 
-        // hover 效果
         btn.onmouseenter = function() {
             this.style.transform = 'scale(1.15)';
             this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.35)';
@@ -48,7 +48,6 @@
             this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
         };
 
-        // 点击展开提示
         var tooltip = null;
         btn.onclick = function() {
             if (tooltip) {
@@ -80,12 +79,12 @@
                 '<div>3. 在右侧输入框写笔记，点 <b>「Post」</b> 保存</div>',
                 '<div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;color:#666;font-size:12px;">',
                 '💡 需先点击右上角 <b>Log in</b> 注册免费账号<br>',
-                '📌 笔记仅自己可见，支持跨设备同步',
+                '📌 笔记仅自己可见，支持跨设备同步<br>',
+                '🔍 有批注的文字下方有黄色标记，点击可查看笔记',
                 '</div>'
             ].join('');
             document.body.appendChild(tooltip);
 
-            // 点击其他地方关闭
             setTimeout(function() {
                 document.addEventListener('click', function closeTip(e) {
                     if (!tooltip.contains(e.target) && e.target !== btn) {
@@ -98,5 +97,47 @@
         };
 
         document.body.appendChild(btn);
+    }
+
+    // ========== 高亮文字指示器 ==========
+    function initHighlightObserver() {
+        // 监听 DOM 变化，为新增的高亮元素添加指示器
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) {
+                        // 检查是否是 Hypothesis 高亮元素
+                        if (node.classList && (
+                            node.classList.contains('hypothesis-highlight') ||
+                            node.classList.contains('hypothesis-svg-highlight')
+                        )) {
+                            addHighlightIndicator(node);
+                        }
+                        // 检查子元素
+                        var highlights = node.querySelectorAll ? 
+                            node.querySelectorAll('.hypothesis-highlight, .hypothesis-svg-highlight') : [];
+                        highlights.forEach(addHighlightIndicator);
+                    }
+                });
+            });
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+        // 处理已存在的高亮
+        var existing = document.querySelectorAll('.hypothesis-highlight, .hypothesis-svg-highlight');
+        existing.forEach(addHighlightIndicator);
+    }
+
+    function addHighlightIndicator(element) {
+        // 避免重复添加
+        if (element.dataset.hintAdded) return;
+        element.dataset.hintAdded = 'true';
+
+        // 添加标题提示
+        element.title = '📝 点击查看批注';
     }
 })();
