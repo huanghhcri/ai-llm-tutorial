@@ -387,7 +387,6 @@ h3.toc-chapter {
     background-color: rgba(255, 235, 59, 0.25) !important;
     border-bottom: 2px solid #ffc107 !important;
     cursor: pointer !important;
-    transition: background-color 0.15s !important;
     position: relative !important;
     padding: 1px 0 !important;
 }
@@ -397,45 +396,24 @@ h3.toc-chapter {
     background-color: rgba(255, 235, 59, 0.45) !important;
 }
 
-/* 高亮文字右侧添加小图标指示器 */
+/* 文字右上角显示笔记本图标 📒 */
 .hypothesis-highlight::after,
 .hypothesis-svg-highlight::after {
-    content: "📝";
-    font-size: 12px;
-    vertical-align: super;
-    margin-left: 2px;
-    opacity: 0.7;
+    content: "\1F4D2";
+    font-size: 11px;
+    position: relative;
+    top: -0.6em;
+    margin-left: 1px;
+    opacity: 0.85;
     cursor: pointer;
+    line-height: 0;
 }
 
-/* Hypothesis 侧边栏样式 */
+/* Hypothesis 侧边栏 */
 .hypothesis-sidebar {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
-/* Hypothesis 浮动工具栏 */
 .hypothesis-adder {
     z-index: 1000 !important;
-}
-
-.hypothesis-adder .annotator-adder-actions button {
-    font-size: 13px !important;
-}
-
-/* 标注提示卡片 */
-.annotation-callout {
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #3f51b5;
-    color: white;
-    font-size: 11px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.2s;
-    pointer-events: none;
-    z-index: 10;
 }
