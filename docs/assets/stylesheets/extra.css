@@ -381,32 +381,37 @@ h3.toc-chapter {
 
 /* ===== Hypothesis 批注样式增强 ===== */
 
-/* 高亮文字样式 */
+/* 高亮文字样式 - 蓝色系 */
 .hypothesis-highlight,
 .hypothesis-svg-highlight {
-    background-color: rgba(255, 235, 59, 0.25) !important;
-    border-bottom: 2px solid #ffc107 !important;
+    background-color: rgba(63, 81, 181, 0.12) !important;
+    border-bottom: 2px solid #5c6bc0 !important;
     cursor: pointer !important;
     position: relative !important;
-    padding: 1px 0 !important;
+    padding: 1px 2px !important;
+    border-radius: 2px !important;
+    transition: background-color 0.15s !important;
 }
 
 .hypothesis-highlight:hover,
 .hypothesis-svg-highlight:hover {
-    background-color: rgba(255, 235, 59, 0.45) !important;
+    background-color: rgba(63, 81, 181, 0.25) !important;
 }
 
-/* 文字右上角显示笔记本图标 📒 */
-.hypothesis-highlight::after,
-.hypothesis-svg-highlight::after {
-    content: "\1F4D2";
-    font-size: 11px;
-    position: relative;
-    top: -0.6em;
+/* 笔记本图标 - 由 JS 插入 */
+.annotation-icon {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: super;
+    line-height: 1;
     margin-left: 1px;
-    opacity: 0.85;
     cursor: pointer;
-    line-height: 0;
+    opacity: 0.85;
+    transition: opacity 0.15s;
+}
+
+.annotation-icon:hover {
+    opacity: 1;
 }
 
 /* Hypothesis 侧边栏 */
