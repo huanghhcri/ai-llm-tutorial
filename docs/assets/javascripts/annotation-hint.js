@@ -82,6 +82,16 @@
         wrapper.className = 'annotation-icon';
         wrapper.title = '点击查看批注';
         wrapper.innerHTML = ICON_SVG;
+
+        // 判断结尾字符：中文标点/汉字不需要额外间距，英文/数字需要
+        var textBefore = '';
+        for (var i = 0; i < el.childNodes.length; i++) {
+            if (el.childNodes[i].nodeType === 3) textBefore += el.childNodes[i].textContent;
+        }
+        var lastChar = textBefore.trim().slice(-1);
+        var isChinese = /[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/.test(lastChar);
+        wrapper.style.marginLeft = isChinese ? '0' : '3px';
+
         wrapper.onclick = function(e) { e.stopPropagation(); el.click(); };
         el.appendChild(wrapper);
     }
