@@ -101,7 +101,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/anchor-expand.js
-  - assets/javascripts/annotation-hint.js
+  - assets/javascripts/annotation-hint.js?v=2
   - https://hypothes.is/embed.js
 
 extra:
