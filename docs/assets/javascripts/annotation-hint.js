@@ -1,13 +1,14 @@
 /**
  * Hypothesis 批注工具增强
  * - 右下角 📝 入口按钮
- * - 高亮文字右上角插入蓝色笔记本图标（SVG）
+ * - 高亮文字右上角插入文档图标
+ * - 删除批注后自动移除图标
  */
 (function() {
     'use strict';
 
-    // SVG 笔记本图标
-    var NOTEBOOK_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3f51b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="7" x2="16" y2="7"/><line x1="9" y1="11" x2="14" y2="11"/></svg>';
+    // 文档图标 SVG（和工具栏提示卡片里的图标风格一致）
+    var DOC_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#5c6bc0" stroke="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v1.5H8zm0 3h6v1.5H8zm0-6h3v1.5H8z" opacity="0.5"/></svg>';
 
     window.addEventListener('load', function() {
         setTimeout(initAnnotationHint, 2000);
@@ -29,7 +30,7 @@
             if (tooltip) { tooltip.remove(); tooltip = null; return; }
             tooltip = document.createElement('div');
             tooltip.style.cssText = 'position:fixed;bottom:140px;right:20px;background:white;color:#333;padding:16px 20px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:101;font-size:14px;line-height:1.8;max-width:300px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;';
-            tooltip.innerHTML = '<div style="font-weight:600;font-size:15px;margin-bottom:8px;color:#3f51b5;">📝 批注笔记功能</div><div style="margin-bottom:6px"><b>使用方法：</b></div><div>1. <b>选中</b>页面中的一段文字</div><div>2. 点击弹出的 <b>「Annotate」</b> 按钮</div><div>3. 在右侧输入框写笔记，点 <b>「Post」</b> 保存</div><div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;color:#666;font-size:12px;">💡 需先点击右上角 <b>Log in</b> 注册免费账号<br>📌 笔记仅自己可见，支持跨设备同步<br>🔍 有批注的文字右上角有 <span style="color:#3f51b5">📘</span> 笔记本图标</div>';
+            tooltip.innerHTML = '<div style="font-weight:600;font-size:15px;margin-bottom:8px;color:#3f51b5;">📝 批注笔记功能</div><div style="margin-bottom:6px"><b>使用方法：</b></div><div>1. <b>选中</b>页面中的一段文字</div><div>2. 点击弹出的 <b>「Annotate」</b> 按钮</div><div>3. 在右侧输入框写笔记，点 <b>「Post」</b> 保存</div><div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee;color:#666;font-size:12px;">💡 需先点击右上角 <b>Log in</b> 注册免费账号<br>📌 笔记仅自己可见，支持跨设备同步<br>🔍 有批注的文字右上角有 <span style="color:#5c6bc0">📄</span> 图标</div>';
             document.body.appendChild(tooltip);
             setTimeout(function() {
                 document.addEventListener('click', function close(e) {
@@ -43,39 +44,78 @@
         document.body.appendChild(btn);
     }
 
-    // ========== 高亮文字 → 右上角笔记本图标 ==========
+    // ========== 高亮文字 ↔ 图标同步 ==========
     function initHighlightObserver() {
+        // 监听 DOM 增删变化
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(m) {
+                // 新增节点 → 添加图标
                 m.addedNodes.forEach(function(node) {
                     if (node.nodeType !== 1) return;
-                    if (node.classList && (node.classList.contains('hypothesis-highlight') || node.classList.contains('hypothesis-svg-highlight'))) {
-                        addIcon(node);
-                    }
+                    if (isHighlight(node)) addIcon(node);
                     if (node.querySelectorAll) {
                         node.querySelectorAll('.hypothesis-highlight, .hypothesis-svg-highlight').forEach(addIcon);
                     }
+                });
+                // 删除节点 → 清理残留图标
+                m.removedNodes.forEach(function(node) {
+                    if (node.nodeType !== 1) return;
+                    // 如果高亮元素被移除，检查同级是否有残留图标
+                    cleanupOrphanIcons();
                 });
             });
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
+        // 已存在的高亮
         document.querySelectorAll('.hypothesis-highlight, .hypothesis-svg-highlight').forEach(addIcon);
+
+        // 定期清理（兜底，处理 observer 漏掉的情况）
+        setInterval(cleanupOrphanIcons, 3000);
+    }
+
+    function isHighlight(el) {
+        return el.classList && (el.classList.contains('hypothesis-highlight') || el.classList.contains('hypothesis-svg-highlight'));
     }
 
     function addIcon(el) {
         if (el.dataset.iconAdded) return;
         el.dataset.iconAdded = 'true';
 
-        // 创建上标容器
         var wrapper = document.createElement('sup');
         wrapper.className = 'annotation-icon';
         wrapper.title = '点击查看批注';
-        wrapper.innerHTML = NOTEBOOK_SVG;
+        wrapper.innerHTML = DOC_ICON;
         wrapper.onclick = function(e) {
             e.stopPropagation();
             el.click();
         };
         el.appendChild(wrapper);
+    }
+
+    // 清理已没有父级高亮元素的孤儿图标
+    function cleanupOrphanIcons() {
+        document.querySelectorAll('.annotation-icon').forEach(function(icon) {
+            // 如果父元素不再是 hypothesis-highlight，移除图标
+            var parent = icon.parentElement;
+            if (!parent || !isHighlight(parent)) {
+                icon.remove();
+            }
+            // 如果父元素的 dataset.iconAdded 但元素已不在 DOM 中
+            if (parent && parent.dataset.iconAdded && !document.body.contains(parent)) {
+                icon.remove();
+            }
+        });
+
+        // 重置已消失的高亮元素的标记
+        document.querySelectorAll('[data-icon-added]').forEach(function(el) {
+            if (!document.body.contains(el)) return;
+            // 检查是否还有图标
+            var hasIcon = el.querySelector('.annotation-icon');
+            if (!hasIcon) {
+                delete el.dataset.iconAdded;
+                addIcon(el);
+            }
+        });
     }
 })();
