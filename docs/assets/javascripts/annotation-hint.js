@@ -8,7 +8,7 @@
     'use strict';
 
     // 文档图标 SVG（和工具栏提示卡片里的图标风格一致）
-    var DOC_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="#5c6bc0" stroke="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M8 12h8v1.5H8zm0 3h6v1.5H8zm0-6h3v1.5H8z" opacity="0.5"/></svg>';
+    var DOC_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#3f51b5" stroke="none"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>';
 
     window.addEventListener('load', function() {
         setTimeout(initAnnotationHint, 2000);
