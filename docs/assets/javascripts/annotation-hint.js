@@ -89,8 +89,8 @@
             if (el.childNodes[i].nodeType === 3) textBefore += el.childNodes[i].textContent;
         }
         var lastChar = textBefore.trim().slice(-1);
-        var isChinese = /[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/.test(lastChar);
-        wrapper.style.marginLeft = isChinese ? '0' : '3px';
+        var isCnPunct = /[。，；：！？、）】》」』\u201c\u201d\u2018\u2019…—]/.test(lastChar);
+        wrapper.style.marginLeft = isCnPunct ? '0' : '3px';
 
         wrapper.onclick = function(e) { e.stopPropagation(); el.click(); };
         el.appendChild(wrapper);
