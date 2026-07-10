@@ -404,7 +404,7 @@ h3.toc-chapter {
     font-size: 12px;
     vertical-align: super;
     line-height: 1;
-    margin-left: 1px;
+    margin-left: 3px;
     cursor: pointer;
     opacity: 0.85;
     transition: opacity 0.15s;
