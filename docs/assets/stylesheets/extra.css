@@ -1,5 +1,5 @@
 /* ========================================
-   AI 大模型全栈教程 - 自定义样式
+   技术成长笔记 - 自定义样式
    ======================================== */
 
 /* 全局字体和排版 */
@@ -421,4 +421,31 @@ h3.toc-chapter {
 
 .hypothesis-adder {
     z-index: 1000 !important;
+}
+
+/* ===== 首页系列卡片增强 ===== */
+.md-content .grid.cards > ul > li {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.md-content .grid.cards > ul > li:hover {
+    border-color: var(--md-primary-fg-color);
+    box-shadow: 0 4px 20px rgba(63,81,181,0.15);
+    transform: translateY(-2px);
+}
+
+.md-content .grid.cards > ul > li p:last-child a {
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+/* ===== 统计表格（首页） ===== */
+.md-content table tr td:first-child {
+    font-weight: 600;
 }

@@ -1,9 +1,9 @@
-# AI 大模型全栈教程
-# 面向 C# 开发者的 AI 大模型全栈学习指南
+# 技术成长笔记
+# 系统化技术学习路径：AI 大模型 + .NET 企业开发
 # https://github.com/huanghhcri/ai-llm-tutorial
 
-site_name: AI 大模型全栈教程
-site_description: 从 Python 基础到 Agent 开发，17 章系统学习
+site_name: 技术成长笔记
+site_description: 系统化技术学习路径 — AI 大模型篇 · .NET 企业开发篇
 site_author: huanghhcri
 site_url: https://huanghhcri.github.io/ai-llm-tutorial/
 
@@ -32,7 +32,7 @@ theme:
     text: Noto Sans SC
     code: JetBrains Mono
   features:
-    - navigation.tabs              # 顶部标签页（基础篇/原理篇/应用篇...）
+    - navigation.tabs              # 顶部标签页（首页/AI篇/.NET篇）
     - navigation.tabs.link         # 标签页可点击跳转
     - navigation.sections          # 侧边栏分组
     - navigation.expand            # 自动展开所有导航项
@@ -101,7 +101,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/anchor-expand.js
-  - assets/javascripts/annotation-hint.js?v=4
+  - assets/javascripts/annotation-hint.js?v=5
   - https://hypothes.is/embed.js
 
 extra:
@@ -112,26 +112,60 @@ extra:
 
 nav:
   - 首页: index.md
-  - 面试题库: interview-questions.md
-  - 基础篇:
-    - 第 01 章 Python 基础: 第01章_Python基础.md
-    - 第 02 章 深度学习基础: 第02章_深度学习基础.md
-    - 第 03 章 NLP 基础与 Tokenization: 第03章_NLP基础与Tokenization.md
-  - 原理篇:
-    - 第 04 章 Transformer 架构详解: 第04章_Transformer架构详解.md
-    - 第 05 章 大模型原理与发展脉络: 第05章_大模型原理与发展脉络.md
-  - 应用篇:
-    - 第 06 章 大模型 API 调用实战: 第06章_大模型API调用实战.md
-    - 第 07 章 Prompt Engineering: 第07章_PromptEngineering提示词工程.md
-    - 第 08 章 Embedding 与向量数据库: 第08章_Embedding与向量数据库.md
-    - 第 09 章 RAG 检索增强生成: 第09章_RAG检索增强生成.md
-  - 框架篇:
-    - 第 10 章 LangChain 与 LangGraph: 第10章_LangChain与LangGraph实战.md
-    - 第 11 章 AI Agent 开发: 第11章_AI_Agent开发.md
-    - 第 12 章 多 Agent 系统: 第12章_多Agent系统.md
-  - 进阶篇:
-    - 第 13 章 模型微调: 第13章_模型微调.md
-    - 第 14 章 模型量化: 第14章_模型量化.md
-    - 第 15 章 私有化部署: 第15章_私有化部署.md
-    - 第 16 章 多模态大模型: 第16章_多模态大模型.md
-    - 第 17 章 模型评估与对齐: 第17章_模型评估与对齐.md
+  - AI 大模型篇:
+    - ai/index.md
+    - 基础篇:
+      - 第 01 章 Python 基础: ai/第01章_Python基础.md
+      - 第 02 章 深度学习基础: ai/第02章_深度学习基础.md
+      - 第 03 章 NLP 基础与 Tokenization: ai/第03章_NLP基础与Tokenization.md
+    - 原理篇:
+      - 第 04 章 Transformer 架构详解: ai/第04章_Transformer架构详解.md
+      - 第 05 章 大模型原理与发展脉络: ai/第05章_大模型原理与发展脉络.md
+    - 应用篇:
+      - 第 06 章 大模型 API 调用实战: ai/第06章_大模型API调用实战.md
+      - 第 07 章 Prompt Engineering: ai/第07章_PromptEngineering提示词工程.md
+      - 第 08 章 Embedding 与向量数据库: ai/第08章_Embedding与向量数据库.md
+      - 第 09 章 RAG 检索增强生成: ai/第09章_RAG检索增强生成.md
+    - 框架篇:
+      - 第 10 章 LangChain 与 LangGraph: ai/第10章_LangChain与LangGraph实战.md
+      - 第 11 章 AI Agent 开发: ai/第11章_AI_Agent开发.md
+      - 第 12 章 多 Agent 系统: ai/第12章_多Agent系统.md
+    - 进阶篇:
+      - 第 13 章 模型微调: ai/第13章_模型微调.md
+      - 第 14 章 模型量化: ai/第14章_模型量化.md
+      - 第 15 章 私有化部署: ai/第15章_私有化部署.md
+      - 第 16 章 多模态大模型: ai/第16章_多模态大模型.md
+      - 第 17 章 模型评估与对齐: ai/第17章_模型评估与对齐.md
+    - 面试题库: ai/interview-questions.md
+  - .NET 企业开发篇:
+    - dotnet/index.md
+    - 语言与框架基础:
+      - 第 01 章 C# 进阶与面试高频原理: dotnet/第01章_CSharp进阶与面试高频原理.md
+      - 第 02 章 ASP.NET Core 核心原理: dotnet/第02章_AspNetCore核心原理.md
+      - 第 03 章 配置体系: dotnet/第03章_配置体系与appsettings.json编写.md
+      - 第 04 章 ABP 框架深度解析: dotnet/第04章_ABP框架深度解析.md
+      - 第 05 章 ABP 内置模块与基础设施: dotnet/第05章_ABP内置模块与基础设施.md
+    - 数据与设计:
+      - 第 06 章 EF Core 进阶与数据库设计: dotnet/第06章_EFCore进阶与数据库设计.md
+      - 第 07 章 实体设计与仓储模式进阶: dotnet/第07章_实体设计与仓储模式进阶.md
+      - 第 08 章 应用服务 DTO 与 API 设计: dotnet/第08章_应用服务DTO与API设计规范.md
+      - 第 09 章 设计模式与架构原则: dotnet/第09章_设计模式与架构原则.md
+    - 安全与多租户:
+      - 第 10 章 认证与授权: dotnet/第10章_认证与授权.md
+      - 第 11 章 多租户架构: dotnet/第11章_多租户架构.md
+    - 中间件与基础设施:
+      - 第 12 章 Redis 缓存与分布式锁: dotnet/第12章_Redis缓存与分布式锁.md
+      - 第 13 章 RabbitMQ 与 CAP 事件总线: dotnet/第13章_RabbitMQ与CAP分布式事件总线.md
+      - 第 14 章 Hangfire 后台任务: dotnet/第14章_Hangfire后台任务与定时作业.md
+      - 第 15 章 文件管理与 Excel 导入导出: dotnet/第15章_文件管理与Excel导入导出.md
+      - 第 16 章 日志体系与异常处理: dotnet/第16章_日志体系与异常处理.md
+    - 网络与实时通信:
+      - 第 17 章 网络协议与安全防护: dotnet/第17章_网络协议与安全防护.md
+      - 第 18 章 SignalR 实时通信: dotnet/第18章_SignalR实时通信与消息推送.md
+    - 架构与工程化:
+      - 第 19 章 微服务架构与 API 网关: dotnet/第19章_微服务架构与API网关.md
+      - 第 20 章 第三方服务集成: dotnet/第20章_第三方服务集成.md
+      - 第 21 章 单元测试与质量保障: dotnet/第21章_单元测试与质量保障.md
+      - 第 22 章 Git 工作流与 Linux 运维: dotnet/第22章_Git工作流与Linux运维基础.md
+      - 第 23 章 Docker 容器化与 CI/CD: dotnet/第23章_Docker容器化CICD与生产运维.md
+    - 面试题库: dotnet/interview-questions.md
