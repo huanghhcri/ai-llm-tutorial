@@ -212,11 +212,70 @@
     background-color: var(--md-accent-fg-color--transparent);
 }
 
-/* ===== 内容区域 ===== */
+/* ===== 内容区域（最大化宽度） ===== */
 .md-content__inner {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 2rem 3rem;
+    transition: padding 0.3s ease;
+}
+
+/* 侧边栏收起时内容区域自动扩展 */
+.md-sidebar--primary {
+    transition: width 0.3s ease, min-width 0.3s ease, opacity 0.2s ease;
+}
+
+body.sidebar-collapsed .md-sidebar--primary {
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden;
+    opacity: 0;
+}
+
+body.sidebar-collapsed .md-content {
+    margin-left: 0 !important;
+}
+
+body.sidebar-collapsed .md-content__inner {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* 侧边栏切换按钮 */
+.sidebar-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+    background: var(--md-primary-fg-color);
+    color: white;
+    border-color: var(--md-primary-fg-color);
+    box-shadow: 0 4px 12px rgba(63,81,181,0.25);
+}
+
+.sidebar-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+body.sidebar-collapsed .sidebar-toggle svg {
+    transform: rotate(180deg);
 }
 
 /* ===== 图片 ===== */
@@ -282,6 +341,19 @@
     
     .md-content h1 { font-size: 1.5rem; }
     .md-content h2 { font-size: 1.2rem; }
+
+    /* 移动端隐藏侧边栏切换按钮（已有汉堡菜单） */
+    .sidebar-toggle {
+        display: none;
+    }
+}
+
+/* 中等屏幕（平板）收起侧边栏后给更多内边距 */
+@media screen and (min-width: 76.1875em) and (max-width: 90em) {
+    body.sidebar-collapsed .md-content__inner {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 }
 
 /* ===== 打印 ===== */
