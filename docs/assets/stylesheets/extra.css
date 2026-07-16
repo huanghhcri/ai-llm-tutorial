@@ -1,523 +1,539 @@
-/* ========================================
-   技术成长笔记 - 自定义样式
-   ======================================== */
-
-/* 全局字体和排版 */
-.md-content {
-    font-feature-settings: "kern";
-    text-rendering: optimizeLegibility;
-    line-height: 1.8;
-}
-
-/* ===== 标题层次增强 ===== */
-.md-content h1 {
-    font-weight: 800;
-    font-size: 1.8rem;
-    margin-top: 1rem;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 3px solid var(--md-primary-fg-color);
-    letter-spacing: -0.02em;
-}
-
-.md-content h2 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 2.5rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.4rem;
-    padding-left: 0.5rem;
-    border-left: 4px solid var(--md-primary-fg-color);
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.md-content h3 {
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin-top: 2rem;
-    margin-bottom: 0.6rem;
-    color: var(--md-primary-fg-color);
-}
-
-.md-content h4 {
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.4rem;
-}
-
-/* ===== 段落和文本 ===== */
-.md-content p {
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    text-align: justify;
-}
-
-.md-content strong {
-    color: var(--md-primary-fg-color);
-    font-weight: 600;
-}
-
-/* ===== 代码块 ===== */
-.md-content code {
-    font-size: 0.82em;
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
-    background-color: var(--md-code-bg-color);
-}
-
-.md-content pre code {
-    font-size: 0.8rem;
-    line-height: 1.65;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-}
-
-.md-content .highlight {
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 1rem 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-/* ===== 表格 ===== */
-.md-content table {
-    display: table;
-    width: 100%;
-    font-size: 0.85em;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    margin: 1.2rem 0;
-}
-
-.md-content table th {
-    background-color: var(--md-primary-fg-color);
-    color: white;
-    font-weight: 600;
-    white-space: nowrap;
-    padding: 10px 14px;
-    border: none;
-    font-size: 0.9em;
-}
-
-.md-content table td {
-    padding: 9px 14px;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-    vertical-align: top;
-}
-
-.md-content table tr:last-child td {
-    border-bottom: none;
-}
-
-.md-content table tr:hover td {
-    background-color: rgba(0,0,0,0.02);
-}
-
-/* ===== Admonition（提示框） ===== */
-.md-typeset .admonition {
-    border-radius: 8px;
-    margin: 1.5em 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    border-left-width: 4px;
-}
-
-.md-typeset .admonition-title {
-    border-radius: 8px 8px 0 0;
-    font-weight: 600;
-    font-size: 0.95em;
-}
-
-/* ===== 折叠块（面试题目录） ===== */
-.md-typeset details {
-    border-radius: 8px;
-    margin: 0.5em 0;
-    border: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.md-typeset details summary {
-    padding: 0.6rem 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.md-typeset details summary:hover {
-    background-color: var(--md-accent-fg-color--transparent);
-}
-
-.md-typeset details[open] summary {
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 8px 8px 0 0;
-}
-
-/* ===== 侧边栏导航 ===== */
-.md-nav__item {
-    font-size: 0.82rem;
-    line-height: 1.6;
-}
-
-.md-nav__link--active {
-    font-weight: 700;
-    color: var(--md-primary-fg-color) !important;
-}
-
-.md-nav__link--active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--md-primary-fg-color);
-    border-radius: 0 3px 3px 0;
-}
-
-/* ===== 顶部标签页 ===== */
-.md-tabs {
-    background-color: var(--md-primary-fg-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
-}
-
-.md-tabs__link {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.85) !important;
-}
-
-.md-tabs__link--active {
-    color: white !important;
-    font-weight: 700;
-    border-bottom: 2px solid white;
-}
-
-/* ===== 页脚（上一章/下一章） ===== */
-.md-footer {
-    margin-top: 3rem;
-    border-top: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.md-footer__link--prev,
-.md-footer__link--next {
-    border-radius: 8px;
-    padding: 0.8rem 1.2rem;
-    transition: background-color 0.2s;
-}
-
-.md-footer__link--prev:hover,
-.md-footer__link--next:hover {
-    background-color: var(--md-accent-fg-color--transparent);
-}
-
-/* ===== 内容区域（最大化宽度） ===== */
-.md-content__inner {
-    max-width: 100%;
-    margin: 0;
-    padding: 2rem 3rem;
-    transition: padding 0.3s ease;
-}
-
-/* 侧边栏收起时内容区域自动扩展 */
-.md-sidebar--primary {
-    transition: width 0.3s ease, min-width 0.3s ease, opacity 0.2s ease;
-}
-
-body.sidebar-collapsed .md-sidebar--primary {
-    width: 0 !important;
-    min-width: 0 !important;
-    overflow: hidden;
-    opacity: 0;
-}
-
-body.sidebar-collapsed .md-content {
-    margin-left: 0 !important;
-}
-
-body.sidebar-collapsed .md-content__inner {
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
-
-/* 侧边栏切换按钮 */
-.sidebar-toggle {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    z-index: 50;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    background: var(--md-default-bg-color);
-    color: var(--md-default-fg-color);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-}
-
-.sidebar-toggle:hover {
-    background: var(--md-primary-fg-color);
-    color: white;
-    border-color: var(--md-primary-fg-color);
-    box-shadow: 0 4px 12px rgba(63,81,181,0.25);
-}
-
-.sidebar-toggle svg {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-body.sidebar-collapsed .sidebar-toggle svg {
-    transform: rotate(180deg);
-}
-
-/* ===== 图片 ===== */
-.md-content img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin: 1rem 0;
-    max-width: 100%;
-}
-
-/* ===== 链接 ===== */
-.md-content a {
-    color: var(--md-primary-fg-color);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s, color 0.2s;
-}
-
-.md-content a:hover {
-    border-bottom-color: var(--md-primary-fg-color);
-}
-
-/* ===== 列表 ===== */
-.md-content ul, .md-content ol {
-    padding-left: 1.5rem;
-}
-
-.md-content li {
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-}
-
-.md-content li > ul, .md-content li > ol {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-}
-
-/* ===== 引用块 ===== */
-.md-content blockquote {
-    border-left: 4px solid var(--md-primary-fg-color);
-    background-color: var(--md-default-fg-color--lightest);
-    border-radius: 0 8px 8px 0;
-    padding: 0.8rem 1.2rem;
-    margin: 1rem 0;
-    font-style: normal;
-}
-
-/* ===== 搜索框 ===== */
-.md-search__form {
-    border-radius: 8px;
-}
-
-/* ===== 响应式 ===== */
-@media screen and (max-width: 76.1875em) {
-    .md-nav--primary .md-nav__title {
-        background-color: var(--md-primary-fg-color);
-    }
-    
-    .md-content__inner {
-        padding: 1rem 1.2rem;
-        max-width: 100%;
-    }
-    
-    .md-content h1 { font-size: 1.5rem; }
-    .md-content h2 { font-size: 1.2rem; }
-
-    /* 移动端隐藏侧边栏切换按钮（已有汉堡菜单） */
-    .sidebar-toggle {
-        display: none;
-    }
-}
-
-/* 中等屏幕（平板）收起侧边栏后给更多内边距 */
-@media screen and (min-width: 76.1875em) and (max-width: 90em) {
-    body.sidebar-collapsed .md-content__inner {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-}
-
-/* ===== 打印 ===== */
-@media print {
-    .md-sidebar, .md-header, .md-footer,
-    .md-content__button, .md-tabs,
-    .md-source-file { display: none !important; }
-    .md-content { margin: 0; padding: 0; }
-    .md-content__inner { max-width: 100%; padding: 0; }
-}
-
-
-/* ===== 面试题目录悬浮跳转标签 ===== */
-.toc-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: background-color 0.15s;
-}
-
-.toc-row:hover {
-    background-color: var(--md-accent-fg-color--transparent);
-}
-
-.toc-row .jump-btn {
-    opacity: 0;
-    transition: opacity 0.15s;
-    font-size: 0.8em;
-    color: var(--md-primary-fg-color);
-    text-decoration: none;
-    padding: 2px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--md-primary-fg-color);
-    white-space: nowrap;
-}
-
-.toc-row:hover .jump-btn {
-    opacity: 1;
-}
-
-.toc-row .jump-btn:hover {
-    background-color: var(--md-primary-fg-color);
-    color: white;
-}
-
-/* ===== 表格行悬浮 ===== */
-.md-content table tr {
-    transition: background-color 0.15s;
-}
-
-/* ===== 面试题目录：隐藏正文中的章节标题，只在右侧 TOC 显示 ===== */
-h3.toc-chapter {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-}
-
-/* ===== 右侧目录样式 ===== */
-.md-sidebar--secondary .md-nav__item {
-    padding: 2px 0;
-}
-
-.md-sidebar--secondary .md-nav__link {
-    font-size: 0.75rem;
-    color: var(--md-default-fg-color--light);
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: all 0.15s;
-}
-
-.md-sidebar--secondary .md-nav__link:hover {
-    color: var(--md-primary-fg-color);
-    background-color: var(--md-accent-fg-color--transparent);
-}
-
-.md-sidebar--secondary .md-nav__link--active {
-    color: var(--md-primary-fg-color);
-    font-weight: 600;
-}
-
-/* 目录标题 */
-.md-sidebar--secondary .md-nav__title {
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 8px 12px;
-    color: var(--md-default-fg-color--light);
-}
-
-/* 子项缩进 */
-.md-sidebar--secondary .md-nav__item .md-nav__item {
-    padding-left: 12px;
-}
-
-/* ===== Hypothesis 批注样式增强 ===== */
-
-/* 高亮文字样式 - 蓝色系 */
-.hypothesis-highlight,
-.hypothesis-svg-highlight {
-    background-color: rgba(255, 235, 59, 0.2) !important;
-    border-bottom: 2px solid #ffc107 !important;
-    cursor: pointer !important;
-    position: relative !important;
-    padding: 1px 2px !important;
-    border-radius: 2px !important;
-    transition: background-color 0.15s !important;
-}
-
-.hypothesis-highlight:hover,
-.hypothesis-svg-highlight:hover {
-    background-color: rgba(255, 235, 59, 0.4) !important;
-}
-
-/* 笔记本图标 - 由 JS 插入 */
-.annotation-icon {
-    display: inline-block;
-    font-size: 12px;
-    vertical-align: super;
-    line-height: 1;
-    margin-left: 3px;
-    cursor: pointer;
-    opacity: 0.85;
-    transition: opacity 0.15s;
-}
-
-.annotation-icon:hover {
-    opacity: 1;
-}
-
-/* Hypothesis 侧边栏 */
-.hypothesis-sidebar {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-}
-
-.hypothesis-adder {
-    z-index: 1000 !important;
-}
-
-/* ===== 首页系列卡片增强 ===== */
-.md-content .grid.cards > ul > li {
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.md-content .grid.cards > ul > li:hover {
-    border-color: var(--md-primary-fg-color);
-    box-shadow: 0 4px 20px rgba(63,81,181,0.15);
-    transform: translateY(-2px);
-}
-
-.md-content .grid.cards > ul > li p:last-child a {
-    border-radius: 8px;
-    padding: 0.5rem 1.2rem;
-    font-weight: 600;
-    transition: all 0.2s;
-}
-
-/* ===== 统计表格（首页） ===== */
-.md-content table tr td:first-child {
-    font-weight: 600;
-}
+     1|/* ========================================
+     2|   技术成长笔记 - 自定义样式
+     3|   ======================================== */
+     4|
+     5|/* 全局字体和排版 */
+     6|.md-content {
+     7|    font-feature-settings: "kern";
+     8|    text-rendering: optimizeLegibility;
+     9|    line-height: 1.8;
+    10|}
+    11|
+    12|/* ===== 标题层次增强 ===== */
+    13|.md-content h1 {
+    14|    font-weight: 800;
+    15|    font-size: 1.8rem;
+    16|    margin-top: 1rem;
+    17|    margin-bottom: 1.2rem;
+    18|    padding-bottom: 0.6rem;
+    19|    border-bottom: 3px solid var(--md-primary-fg-color);
+    20|    letter-spacing: -0.02em;
+    21|}
+    22|
+    23|.md-content h2 {
+    24|    font-weight: 700;
+    25|    font-size: 1.4rem;
+    26|    margin-top: 2.5rem;
+    27|    margin-bottom: 0.8rem;
+    28|    padding-bottom: 0.4rem;
+    29|    padding-left: 0.5rem;
+    30|    border-left: 4px solid var(--md-primary-fg-color);
+    31|    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    32|}
+    33|
+    34|.md-content h3 {
+    35|    font-weight: 600;
+    36|    font-size: 1.15rem;
+    37|    margin-top: 2rem;
+    38|    margin-bottom: 0.6rem;
+    39|    color: var(--md-primary-fg-color);
+    40|}
+    41|
+    42|.md-content h4 {
+    43|    font-weight: 600;
+    44|    font-size: 1.05rem;
+    45|    margin-top: 1.5rem;
+    46|    margin-bottom: 0.4rem;
+    47|}
+    48|
+    49|/* ===== 段落和文本 ===== */
+    50|.md-content p {
+    51|    margin-top: 0.6em;
+    52|    margin-bottom: 0.6em;
+    53|    text-align: justify;
+    54|}
+    55|
+    56|.md-content strong {
+    57|    color: var(--md-primary-fg-color);
+    58|    font-weight: 600;
+    59|}
+    60|
+    61|/* ===== 代码块 ===== */
+    62|.md-content code {
+    63|    font-size: 0.82em;
+    64|    padding: 0.15em 0.4em;
+    65|    border-radius: 4px;
+    66|    font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+    67|    background-color: var(--md-code-bg-color);
+    68|}
+    69|
+    70|.md-content pre code {
+    71|    font-size: 0.8rem;
+    72|    line-height: 1.65;
+    73|    border-radius: 8px;
+    74|    padding: 1rem 1.2rem;
+    75|}
+    76|
+    77|.md-content .highlight {
+    78|    border-radius: 8px;
+    79|    overflow: hidden;
+    80|    margin: 1rem 0;
+    81|    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    82|}
+    83|
+    84|/* ===== 表格 ===== */
+    85|.md-content table {
+    86|    display: table;
+    87|    width: 100%;
+    88|    font-size: 0.85em;
+    89|    border-radius: 8px;
+    90|    overflow: hidden;
+    91|    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    92|    margin: 1.2rem 0;
+    93|}
+    94|
+    95|.md-content table th {
+    96|    background-color: var(--md-primary-fg-color);
+    97|    color: white;
+    98|    font-weight: 600;
+    99|    white-space: nowrap;
+   100|    padding: 10px 14px;
+   101|    border: none;
+   102|    font-size: 0.9em;
+   103|}
+   104|
+   105|.md-content table td {
+   106|    padding: 9px 14px;
+   107|    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+   108|    vertical-align: top;
+   109|}
+   110|
+   111|.md-content table tr:last-child td {
+   112|    border-bottom: none;
+   113|}
+   114|
+   115|.md-content table tr:hover td {
+   116|    background-color: rgba(0,0,0,0.02);
+   117|}
+   118|
+   119|/* ===== Admonition（提示框） ===== */
+   120|.md-typeset .admonition {
+   121|    border-radius: 8px;
+   122|    margin: 1.5em 0;
+   123|    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+   124|    border-left-width: 4px;
+   125|}
+   126|
+   127|.md-typeset .admonition-title {
+   128|    border-radius: 8px 8px 0 0;
+   129|    font-weight: 600;
+   130|    font-size: 0.95em;
+   131|}
+   132|
+   133|/* ===== 折叠块（面试题目录） ===== */
+   134|.md-typeset details {
+   135|    border-radius: 8px;
+   136|    margin: 0.5em 0;
+   137|    border: 1px solid var(--md-default-fg-color--lightest);
+   138|}
+   139|
+   140|.md-typeset details summary {
+   141|    padding: 0.6rem 1rem;
+   142|    font-weight: 600;
+   143|    border-radius: 8px;
+   144|    cursor: pointer;
+   145|    transition: background-color 0.2s;
+   146|}
+   147|
+   148|.md-typeset details summary:hover {
+   149|    background-color: var(--md-accent-fg-color--transparent);
+   150|}
+   151|
+   152|.md-typeset details[open] summary {
+   153|    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+   154|    border-radius: 8px 8px 0 0;
+   155|}
+   156|
+   157|/* ===== 侧边栏导航 ===== */
+   158|.md-nav__item {
+   159|    font-size: 0.82rem;
+   160|    line-height: 1.6;
+   161|}
+   162|
+   163|.md-nav__link--active {
+   164|    font-weight: 700;
+   165|    color: var(--md-primary-fg-color) !important;
+   166|}
+   167|
+   168|.md-nav__link--active::before {
+   169|    content: "";
+   170|    position: absolute;
+   171|    left: 0;
+   172|    top: 0;
+   173|    bottom: 0;
+   174|    width: 3px;
+   175|    background-color: var(--md-primary-fg-color);
+   176|    border-radius: 0 3px 3px 0;
+   177|}
+   178|
+   179|/* ===== 顶部标签页 ===== */
+   180|.md-tabs {
+   181|    background-color: var(--md-primary-fg-color);
+   182|    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+   183|}
+   184|
+   185|.md-tabs__link {
+   186|    font-size: 0.85rem;
+   187|    font-weight: 500;
+   188|    color: rgba(255,255,255,0.85) !important;
+   189|}
+   190|
+   191|.md-tabs__link--active {
+   192|    color: white !important;
+   193|    font-weight: 700;
+   194|    border-bottom: 2px solid white;
+   195|}
+   196|
+   197|/* ===== 页脚（上一章/下一章） ===== */
+   198|.md-footer {
+   199|    margin-top: 3rem;
+   200|    border-top: 1px solid var(--md-default-fg-color--lightest);
+   201|}
+   202|
+   203|.md-footer__link--prev,
+   204|.md-footer__link--next {
+   205|    border-radius: 8px;
+   206|    padding: 0.8rem 1.2rem;
+   207|    transition: background-color 0.2s;
+   208|}
+   209|
+   210|.md-footer__link--prev:hover,
+   211|.md-footer__link--next:hover {
+   212|    background-color: var(--md-accent-fg-color--transparent);
+   213|}
+   214|
+   /* ===== 布局：最大化内容区域 ===== */
+   /* 扩展整体网格到全屏 */
+   .md-grid {
+       max-width: 100%;
+   }
+
+   /* 左侧边栏 */
+   .md-sidebar--primary {
+       transition: width 0.3s ease, min-width 0.3s ease, opacity 0.2s ease;
+   }
+
+   body.sidebar-collapsed .md-sidebar--primary {
+       width: 0 !important;
+       min-width: 0 !important;
+       overflow: hidden;
+       opacity: 0;
+   }
+
+   body.sidebar-collapsed .md-content {
+       margin-left: 0 !important;
+   }
+
+   /* 右侧目录栏 */
+   .md-sidebar--secondary {
+       transition: width 0.3s ease, min-width 0.3s ease, opacity 0.2s ease;
+   }
+
+   body.toc-collapsed .md-sidebar--secondary {
+       width: 0 !important;
+       min-width: 0 !important;
+       overflow: hidden;
+       opacity: 0;
+   }
+
+   body.toc-collapsed .md-content {
+       margin-right: 0 !important;
+   }
+
+   /* 内容区域 */
+   .md-content__inner {
+       max-width: 100%;
+       margin: 0;
+       padding: 1.5rem 2.5rem;
+       transition: padding 0.3s ease;
+   }
+
+   body.sidebar-collapsed .md-content__inner,
+   body.toc-collapsed .md-content__inner {
+       padding-left: 3rem;
+       padding-right: 3rem;
+   }
+
+   body.sidebar-collapsed.toc-collapsed .md-content__inner {
+       padding-left: 4rem;
+       padding-right: 4rem;
+   }
+
+   /* ===== 侧边栏切换按钮（通用） ===== */
+   .sidebar-toggle,
+   .toc-toggle {
+       position: fixed;
+       bottom: 1.5rem;
+       z-index: 50;
+       width: 36px;
+       height: 36px;
+       border-radius: 8px;
+       border: 1px solid var(--md-default-fg-color--lightest);
+       background: var(--md-default-bg-color);
+       color: var(--md-default-fg-color);
+       cursor: pointer;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+       transition: all 0.2s ease;
+   }
+
+   .sidebar-toggle { left: 1.2rem; }
+   .toc-toggle { right: 1.2rem; }
+
+   .sidebar-toggle:hover,
+   .toc-toggle:hover {
+       background: var(--md-primary-fg-color);
+       color: white;
+       border-color: var(--md-primary-fg-color);
+       box-shadow: 0 4px 12px rgba(63,81,181,0.25);
+   }
+
+   .sidebar-toggle svg,
+   .toc-toggle svg {
+       width: 18px;
+       height: 18px;
+       transition: transform 0.3s ease;
+   }
+
+   body.sidebar-collapsed .sidebar-toggle svg {
+       transform: rotate(180deg);
+   }
+
+   body.toc-collapsed .toc-toggle svg {
+       transform: rotate(180deg);
+   }
+   280|
+   281|/* ===== 图片 ===== */
+   282|.md-content img {
+   283|    border-radius: 8px;
+   284|    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   285|    margin: 1rem 0;
+   286|    max-width: 100%;
+   287|}
+   288|
+   289|/* ===== 链接 ===== */
+   290|.md-content a {
+   291|    color: var(--md-primary-fg-color);
+   292|    text-decoration: none;
+   293|    border-bottom: 1px solid transparent;
+   294|    transition: border-color 0.2s, color 0.2s;
+   295|}
+   296|
+   297|.md-content a:hover {
+   298|    border-bottom-color: var(--md-primary-fg-color);
+   299|}
+   300|
+   301|/* ===== 列表 ===== */
+   302|.md-content ul, .md-content ol {
+   303|    padding-left: 1.5rem;
+   304|}
+   305|
+   306|.md-content li {
+   307|    margin-top: 0.3em;
+   308|    margin-bottom: 0.3em;
+   309|}
+   310|
+   311|.md-content li > ul, .md-content li > ol {
+   312|    margin-top: 0.2em;
+   313|    margin-bottom: 0.2em;
+   314|}
+   315|
+   316|/* ===== 引用块 ===== */
+   317|.md-content blockquote {
+   318|    border-left: 4px solid var(--md-primary-fg-color);
+   319|    background-color: var(--md-default-fg-color--lightest);
+   320|    border-radius: 0 8px 8px 0;
+   321|    padding: 0.8rem 1.2rem;
+   322|    margin: 1rem 0;
+   323|    font-style: normal;
+   324|}
+   325|
+   326|/* ===== 搜索框 ===== */
+   327|.md-search__form {
+   328|    border-radius: 8px;
+   329|}
+   330|
+   331|/* ===== 响应式 ===== */
+   332|@media screen and (max-width: 76.1875em) {
+   333|    .md-nav--primary .md-nav__title {
+   334|        background-color: var(--md-primary-fg-color);
+   335|    }
+   336|    
+   337|    .md-content__inner {
+   338|        padding: 1rem 1.2rem;
+   339|        max-width: 100%;
+   340|    }
+   341|    
+   342|    .md-content h1 { font-size: 1.5rem; }
+   343|    .md-content h2 { font-size: 1.2rem; }
+   344|
+   /* 移动端隐藏侧边栏切换按钮（已有汉堡菜单） */
+   .sidebar-toggle,
+   .toc-toggle {
+       display: none;
+   }
+   349|}
+   350|
+   351|/* 中等屏幕（平板）收起侧边栏后给更多内边距 */
+   352|@media screen and (min-width: 76.1875em) and (max-width: 90em) {
+   353|    body.sidebar-collapsed .md-content__inner {
+   354|        padding-left: 3rem;
+   355|        padding-right: 3rem;
+   356|    }
+   357|}
+   358|
+   359|/* ===== 打印 ===== */
+   360|@media print {
+   361|    .md-sidebar, .md-header, .md-footer,
+   362|    .md-content__button, .md-tabs,
+   363|    .md-source-file { display: none !important; }
+   364|    .md-content { margin: 0; padding: 0; }
+   365|    .md-content__inner { max-width: 100%; padding: 0; }
+   366|}
+   367|
+   368|
+   369|/* ===== 面试题目录悬浮跳转标签 ===== */
+   370|.toc-row {
+   371|    display: flex;
+   372|    align-items: center;
+   373|    justify-content: space-between;
+   374|    padding: 4px 8px;
+   375|    border-radius: 6px;
+   376|    transition: background-color 0.15s;
+   377|}
+   378|
+   379|.toc-row:hover {
+   380|    background-color: var(--md-accent-fg-color--transparent);
+   381|}
+   382|
+   383|.toc-row .jump-btn {
+   384|    opacity: 0;
+   385|    transition: opacity 0.15s;
+   386|    font-size: 0.8em;
+   387|    color: var(--md-primary-fg-color);
+   388|    text-decoration: none;
+   389|    padding: 2px 8px;
+   390|    border-radius: 4px;
+   391|    border: 1px solid var(--md-primary-fg-color);
+   392|    white-space: nowrap;
+   393|}
+   394|
+   395|.toc-row:hover .jump-btn {
+   396|    opacity: 1;
+   397|}
+   398|
+   399|.toc-row .jump-btn:hover {
+   400|    background-color: var(--md-primary-fg-color);
+   401|    color: white;
+   402|}
+   403|
+   404|/* ===== 表格行悬浮 ===== */
+   405|.md-content table tr {
+   406|    transition: background-color 0.15s;
+   407|}
+   408|
+   409|/* ===== 面试题目录：隐藏正文中的章节标题，只在右侧 TOC 显示 ===== */
+   410|h3.toc-chapter {
+   411|    position: absolute;
+   412|    width: 1px;
+   413|    height: 1px;
+   414|    overflow: hidden;
+   415|    clip: rect(0, 0, 0, 0);
+   416|}
+   417|
+   418|/* ===== 右侧目录样式 ===== */
+   419|.md-sidebar--secondary .md-nav__item {
+   420|    padding: 2px 0;
+   421|}
+   422|
+   423|.md-sidebar--secondary .md-nav__link {
+   424|    font-size: 0.75rem;
+   425|    color: var(--md-default-fg-color--light);
+   426|    padding: 4px 8px;
+   427|    border-radius: 4px;
+   428|    transition: all 0.15s;
+   429|}
+   430|
+   431|.md-sidebar--secondary .md-nav__link:hover {
+   432|    color: var(--md-primary-fg-color);
+   433|    background-color: var(--md-accent-fg-color--transparent);
+   434|}
+   435|
+   436|.md-sidebar--secondary .md-nav__link--active {
+   437|    color: var(--md-primary-fg-color);
+   438|    font-weight: 600;
+   439|}
+   440|
+   441|/* 目录标题 */
+   442|.md-sidebar--secondary .md-nav__title {
+   443|    font-size: 0.85rem;
+   444|    font-weight: 600;
+   445|    padding: 8px 12px;
+   446|    color: var(--md-default-fg-color--light);
+   447|}
+   448|
+   449|/* 子项缩进 */
+   450|.md-sidebar--secondary .md-nav__item .md-nav__item {
+   451|    padding-left: 12px;
+   452|}
+   453|
+   454|/* ===== Hypothesis 批注样式增强 ===== */
+   455|
+   456|/* 高亮文字样式 - 蓝色系 */
+   457|.hypothesis-highlight,
+   458|.hypothesis-svg-highlight {
+   459|    background-color: rgba(255, 235, 59, 0.2) !important;
+   460|    border-bottom: 2px solid #ffc107 !important;
+   461|    cursor: pointer !important;
+   462|    position: relative !important;
+   463|    padding: 1px 2px !important;
+   464|    border-radius: 2px !important;
+   465|    transition: background-color 0.15s !important;
+   466|}
+   467|
+   468|.hypothesis-highlight:hover,
+   469|.hypothesis-svg-highlight:hover {
+   470|    background-color: rgba(255, 235, 59, 0.4) !important;
+   471|}
+   472|
+   473|/* 笔记本图标 - 由 JS 插入 */
+   474|.annotation-icon {
+   475|    display: inline-block;
+   476|    font-size: 12px;
+   477|    vertical-align: super;
+   478|    line-height: 1;
+   479|    margin-left: 3px;
+   480|    cursor: pointer;
+   481|    opacity: 0.85;
+   482|    transition: opacity 0.15s;
+   483|}
+   484|
+   485|.annotation-icon:hover {
+   486|    opacity: 1;
+   487|}
+   488|
+   489|/* Hypothesis 侧边栏 */
+   490|.hypothesis-sidebar {
+   491|    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+   492|}
+   493|
+   494|.hypothesis-adder {
+   495|    z-index: 1000 !important;
+   496|}
+   497|
+   498|/* ===== 首页系列卡片增强 ===== */
+   499|.md-content .grid.cards > ul > li {
+   500|    border: 1px solid var(--md-default-fg-color--lightest);
+   501|
