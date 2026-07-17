@@ -12,6 +12,7 @@ repo_url: https://github.com/huanghhcri/ai-llm-tutorial
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   palette:
     - media: "(prefers-color-scheme: light)"
